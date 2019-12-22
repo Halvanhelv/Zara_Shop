@@ -1,28 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="" />
+    <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/Product/quick.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Zara.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zara.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/admin/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/watches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/params.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/01f8b64bbcd1d1771d57b892b0de43db.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/0dfa09dbfdea451f2bd4ecce1f4853d6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/364b306c79b1d93468a6e7b3bb5ac7d8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/4308a2aea510aef2251471eb55b72092.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/569d14a411f0127867d8a4f6e480287e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/5967f3628dbf0530e83053c35d4ca0b6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/5c48e08ad86180c2fd6c04a4ac7656dd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/6ee6c42d400b0fa422dcb6f43fe2314c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/6f6672982759ad43dc35768a180673cc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/c7cf1de0eacaaf9b7930d147c8501aae.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/d9584e794bf14307a1b1754df7c901be.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/dc8adbbec5b5927c46a142ad0b6a79a6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/e069a1eb57cc61e7969520dde9cd2bd5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/ebfb35eb6ba35ebdbc3f384a0bc6fa72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/f1072a5317a53a9b5c88a08650a60c7f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/f2aba34809a4f6bf705a49c994c9b9ce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/f79dcf77c33a181f7e42f356c5c136a9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Zara" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Ислам\Documents\OSPanel\domains\Zara\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/gabordemooij/redbean" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/valitron" />
+      <path value="$PROJECT_DIR$/vendor/ishop/core" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1VAvWey61pG5hkHuCkYJRWooBOJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../govno" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,7 +98,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576708746831</updated>
-      <workItem from="1576708748421" duration="15230000" />
+      <workItem from="1576708748421" duration="16906000" />
+      <workItem from="1577021848526" duration="28786000" />
     </task>
     <servers />
   </component>
@@ -58,7 +111,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

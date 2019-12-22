@@ -102,19 +102,18 @@
         <div class="tab-content">
             <?php if (isset($hits)) ?>
             <div class="tab-pane active" id="home1" role="tabpanel">
-
                 <div class="row">
                     <?php foreach ($hits as $hit): ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="product-wrapper mb-45">
                             <div class="product-img">
                                 <a href="#">
-                                    <img src="images/<?=$hit->img;?>" alt="" style="max-height: 376px;min-height: 376px">
+                                    <img src="images/<?=$hit->img;?>" alt="" style="max-height: 376px;width: auto; margin: 0 auto;">
                                 </a>
                                 <span>30% off</span>
                                 <div class="product-action">
                                     <div class="product-action-style">
-                                        <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                        <a class="action-plus" title="Quick View" data-toggle="modal" data-src="<?=$hit->alias;?>" data-target="#exampleModal" href="#">
                                             <i class="ti-plus"></i>
                                         </a>
                                         <a class="action-heart" title="Wishlist" href="#">

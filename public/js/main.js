@@ -1,5 +1,35 @@
+$('body').on('click', '.action-plus', function() {
+    let alias = $(this).data('src');
+    $.ajax({
+
+        url: "product/quick",
+        data: {
+            alias: alias,
+        },
+        type: 'GET',
+        beforeSend: function() {
+
+                $('.modal-body').fadeOut();
+            $('.preloader').fadeIn();
+
+        },
+        success: function(res) {
+           ShowQuick(res);
 
 
+        },
+        error: function() {
+            alert('Ошибка!');
+        }
+    })
+
+
+});
+function ShowQuick(res)
+{
+
+    $('.modal-content').html(res);
+}
 
 /* Filters */
 $('body').on('change', '.w_sidebar input', function() {

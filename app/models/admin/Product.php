@@ -187,6 +187,7 @@ if(!empty($data['detail'])) {
 
     public function uploadImg($name, $wmax, $hmax){
         $uploaddir = WWW . '/images/';
+        $defaultbackground = WWW . '/images/background.png';
         $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
         $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
         if($_FILES[$name]['size'] > 1048576){
@@ -216,7 +217,9 @@ if(!empty($data['detail'])) {
             $_SESSION['slider'] = $new_name;
         }
             self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
+            self::overlay($uploadfile,$uploadfile, $defaultbackground, $ext);
             $res = array("file" => $new_name);
+
             exit(json_encode($res));
         }
         exit("файл не переместился");
@@ -271,5 +274,43 @@ if(!empty($data['detail'])) {
                 imagejpeg($newImg, $dest);
         }
         imagedestroy($newImg);
+    }
+    public static function overlay($target,$dest, $defaultbackground, $ext)
+    {
+
+        $stamp = imagecreatefrompng($defaultbackground);
+        $im = $target;
+        $marge_right = 100;
+        $marge_bottom = 100;
+        switch($ext){
+            case("gif"):
+                $img = imagecreatefromgif($im);
+                break;
+            case("png"):
+                $img = imagecreatefrompng($im);
+                break;
+            default:
+                $img = imagecreatefromjpeg($im);
+        }
+        $sx = imagesx($stamp);
+        $sy = imagesy($stamp);
+        imagecopy($img, $stamp, imagesx($img) - $sx - $marge_right, imagesy($img) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+        // Получаем содержимое файла с другого сервера
+        // Записать полученное содержимое в файл image.png
+
+
+
+        switch($ext){
+            case("gif"):
+                imagegif($img, $dest);
+                break;
+            case("png"):
+                imagepng($img, $dest);
+                break;
+            default:
+                imagejpeg($img, $dest);
+        }
+
+        imagedestroy($img);
     }
 }

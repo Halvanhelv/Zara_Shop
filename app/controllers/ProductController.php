@@ -5,12 +5,14 @@ namespace app\controllers;
 use app\models\Breadcrumbs;
 use app\models\Product;
 
-class ProductController extends AppController {
+class ProductController extends AppController
+{
 
-    public function viewAction(){
+    public function viewAction()
+    {
         $alias = $this->route['alias'];
         $product = \R::findOne('product', "alias = ? AND status = 'on'", [$alias]);
-        if(!$product){
+        if (!$product) {
             throw new \Exception('Страница не найдена', 404);
         }
 
@@ -27,7 +29,7 @@ class ProductController extends AppController {
         // просмотренные товары
         $r_viewed = $p_model->getRecentlyViewed();
         $recentlyViewed = null;
-        if($r_viewed){
+        if ($r_viewed) {
             $recentlyViewed = \R::find('product', 'id IN (' . \R::genSlots($r_viewed) . ')  LIMIT 10', $r_viewed);
         }
 
@@ -36,11 +38,22 @@ class ProductController extends AppController {
         //характеристика товара
         $detail = \R::getAll("SELECT attr_value, detail_name FROM product_detail JOIN detail ON product_detail.attribute_id = detail.id WHERE product_detail.product_id = ?", [$product->id]);
 
-            // модификации
+        // модификации
         $mods = \R::findAll('modification', 'product_id = ?', [$product->id]);
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->set(compact('product', 'related', 'gallery', 'recentlyViewed', 'breadcrumbs', 'mods','detail'));
+        $this->set(compact('product', 'related', 'gallery', 'recentlyViewed', 'breadcrumbs', 'mods', 'detail'));
     }
 
+   public function quickAction()
+    {
+        if (!empty($_GET['alias'])) {
+            $alias = $_GET['alias'];
+            if ($alias = \R::findOne('product', 'alias = ?', [$alias])) {
+                if ($this->isAjax()) {
+                    $this->loadView('quick', compact('alias'));
+                }
+            }
+        }
+    }
 }

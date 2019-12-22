@@ -65,6 +65,7 @@ class ProductController extends AppController {
             $product->attributes['hit'] = $product->attributes['hit'] ? 'on' : 'off';
             $product->attributes['old_price'] = $product->attributes['old_price'] ? $product->attributes['old_price'] : '0';
             $product->attributes['brand_id'] = $product->attributes['brand_id'] ? $product->attributes['brand_id'] : '0';
+            $product->attributes['slider'] = $product->attributes['slider'] ? 'on' : 'off';
             $product->getImg();
             if(!$product->validate($data)){
                 $product->getErrors();
