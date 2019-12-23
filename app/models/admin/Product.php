@@ -275,42 +275,51 @@ if(!empty($data['detail'])) {
         }
         imagedestroy($newImg);
     }
-    public static function overlay($target,$dest, $defaultbackground, $ext)
+    public static function overlay($target,$dest, $background, $ext)
     {
 
-        $stamp = imagecreatefrompng($defaultbackground);
-        $im = $target;
+$finish = $target;
+        $stamp = imagecreatefrompng($background);
         $marge_right = 100;
         $marge_bottom = 100;
+        $main = "";
         switch($ext){
             case("gif"):
-                $img = imagecreatefromgif($im);
+                $main = imagecreatefromgif($finish);
                 break;
             case("png"):
-                $img = imagecreatefrompng($im);
+                $main = imagecreatefrompng($finish);
                 break;
             default:
-                $img = imagecreatefromjpeg($im);
+                $main = imagecreatefromjpeg($finish);
         }
         $sx = imagesx($stamp);
         $sy = imagesy($stamp);
-        imagecopy($img, $stamp, imagesx($img) - $sx - $marge_right, imagesy($img) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
-        // Получаем содержимое файла с другого сервера
-        // Записать полученное содержимое в файл image.png
+        $ix = imagesx($main);
+        $iy = imagesy($main);
+
+        $marge_right = ($sx - $ix) / 2;
+        $marge_bottom = ($sy - $iy) / 2;
+
+        imagecopy($stamp, $main, $marge_right, $marge_bottom, 0, 0, $ix, $iy);
+
 
 
 
         switch($ext){
             case("gif"):
-                imagegif($img, $dest);
+                imagegif($stamp, $dest);
                 break;
             case("png"):
-                imagepng($img, $dest);
+                imagepng($stamp, $dest);
                 break;
             default:
-                imagejpeg($img, $dest);
+                imagejpeg($stamp, $dest);
         }
 
-        imagedestroy($img);
+        imagedestroy($stamp);
+
+
+
     }
 }

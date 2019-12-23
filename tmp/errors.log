@@ -3644,3 +3644,29 @@
 =================
 [2019-12-23 00:58:32] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
 =================
+[2019-12-23 18:01:04] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-12-23 18:02:21] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-12-23 18:02:21] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-12-23 18:38:15] Текст ошибки: Контроллер app\controllers\ImagesController не найден | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 36
+=================
+[2019-12-23 18:38:33] Текст ошибки: Контроллер app\controllers\ImagesController не найден | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 36
+=================
+[2019-12-23 18:39:07] Текст ошибки: Контроллер app\controllers\ImagesController не найден | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 36
+=================
+[2019-12-23 22:19:02] Текст ошибки: syntax error, unexpected '$defaultbackground' (T_VARIABLE) | Файл: W:\domains\Zara\app\models\admin\Product.php | Строка: 282
+=================
+[2019-12-23 22:30:05] Текст ошибки: Контроллер app\controllers\ImagesController не найден | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 36
+=================
+[2019-12-23 22:31:19] Текст ошибки: Контроллер app\controllers\ImagesController не найден | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 36
+=================
+[2019-12-23 22:32:46] Текст ошибки: Контроллер app\controllers\ImagesController не найден | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 36
+=================
+[2019-12-23 22:45:56] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-12-24 00:22:00] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-12-24 00:46:50] Текст ошибки: Страница не найдена | Файл: W:\domains\Zara\vendor\ishop\core\Router.php | Строка: 39
+=================
