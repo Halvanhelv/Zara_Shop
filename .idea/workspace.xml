@@ -3,40 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/admin/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1511d8755d4c36cf13ec44b884729f6e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/242f2b66be5534157c52fd8eea4d6d36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/266df1de3de89983b366205808786fa3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/340ef60994b7550d7d4edda6db167180.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/34433fddd05978d17ba1e31fa4f25b4e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/361565e00fe3bbc89b6fe4eee27c23bd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/36acfb754825a9f58ea5e9b4ac12c243.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/429413f751c7493a294919b61ba9fedd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/46085bced992379d2b71252ae1c6cbc9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/49a47ee1f9f439dcfb35e5e1ffd0869a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/4a8d2684c8723cd9033cfd7d87e2c5a6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/4dd62cb0e9e85fe0107c2741841b58b1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/6731754da6673cf56748e261b74f0731.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/751b9eca0c16f7f730ee6b5025b66851.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/7997f0759f8a67707a3df44ee266d034.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/7bb86059710e598eb3445de6ff16c79c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/7fce29b2855dfe2b1a0be4be818fa099.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/80aeca1ccf663ef11b0e3ae7b42a1977.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/8e0013885c2a68b0fb4c9f254b5feea4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/96c2d7e24856bcbca92709c09bb51266.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/9fa6991736c405e707a7df05aa8644f2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/a14b9010c213a4deb82f3836e3ae99d8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/a223691e9d9c08196e7930e72383be1d.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/ad1a658b21c19cc56548f292fa2b5c27.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/b12dc0a2ab31fe52fa9d1d0d317fe674.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/b1718b6d0e938aa462f7054da88537a0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/params.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/c3a3939ff56dfe69986b4f796135157f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/cbbb2ca921de7eff2769197c657ebb54.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/cea0a84c8b35f6f94b2b598ce616cd30.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/e390bfe6a22ede7c9f7774a7b60825ce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/e59a8b8920bb12e07c83fe28513a47c1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/e8be76fb4ff8e8f5db97ef66493edc0d.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/background23.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" afterDir="false" />
@@ -108,7 +80,8 @@
       <workItem from="1577021848526" duration="29670000" />
       <workItem from="1577113315156" duration="11049000" />
       <workItem from="1577136922683" duration="11000" />
-      <workItem from="1577137565802" duration="1669000" />
+      <workItem from="1577137565802" duration="2311000" />
+      <workItem from="1577185213563" duration="3450000" />
     </task>
     <servers />
   </component>

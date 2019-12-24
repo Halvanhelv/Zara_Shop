@@ -39,17 +39,20 @@ class ProductController extends AppController {
             if($_POST['name'] == 'single'){
                 $wmax = App::$app->getProperty('img_width');
                 $hmax = App::$app->getProperty('img_height');
+                $background = App::$app->getProperty('img_background');
             }elseif($_POST['name'] == 'multi'){
                 $wmax = App::$app->getProperty('gallery_width');
                 $hmax = App::$app->getProperty('gallery_height');
+                $background = App::$app->getProperty('gallery_background');
             }
             else{
                 $wmax = App::$app->getProperty('slider_width');
                 $hmax = App::$app->getProperty('slider_height');
+                $background = App::$app->getProperty('slider_background');
             }
             $name = $_POST['name'];
             $product = new Product();
-            $product->uploadImg($name, $wmax, $hmax);
+            $product->uploadImg($name, $wmax, $hmax,$background);
 
 
         }

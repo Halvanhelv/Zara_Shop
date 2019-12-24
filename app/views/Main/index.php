@@ -108,7 +108,7 @@
                         <div class="product-wrapper mb-45">
                             <div class="product-img">
                                 <a href="#">
-                                    <img src="images/<?=$hit->img;?>" alt="" style="max-height: 376px;width: auto; margin: 0 auto;">
+                                    <img src="images/<?=$hit->img;?>" alt="" >
                                 </a>
                                 <span>30% off</span>
                                 <div class="product-action">

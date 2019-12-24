@@ -185,9 +185,9 @@ if(!empty($data['detail'])) {
         }
     }
 
-    public function uploadImg($name, $wmax, $hmax){
+    public function uploadImg($name, $wmax, $hmax,$background){
         $uploaddir = WWW . '/images/';
-        $defaultbackground = WWW . '/images/background.png';
+        $defaultbackground = $background;
         $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
         $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
         if($_FILES[$name]['size'] > 1048576){
@@ -216,6 +216,7 @@ if(!empty($data['detail'])) {
         elseif($name == 'slider'){
             $_SESSION['slider'] = $new_name;
         }
+
             self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
             self::overlay($uploadfile,$uploadfile, $defaultbackground, $ext);
             $res = array("file" => $new_name);
@@ -304,7 +305,11 @@ $finish = $target;
         imagecopy($stamp, $main, $marge_right, $marge_bottom, 0, 0, $ix, $iy);
 
 
-
+        if($ext == "png"){
+            imagesavealpha($stamp, true); // сохранение альфа канала
+            $transPng = imagecolorallocatealpha($stamp,0,0,0,127); // добавляем прозрачность
+            imagefill($stamp, 0, 0, $transPng); // заливка
+        }
 
         switch($ext){
             case("gif"):
