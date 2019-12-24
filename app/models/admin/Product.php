@@ -189,7 +189,7 @@ if(!empty($data['detail'])) {
         $uploaddir = WWW . '/images/';
         $defaultbackground = $background;
         $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
-        $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
+        $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png","image/webp"); // массив допустимых расширений
         if($_FILES[$name]['size'] > 1048576){
             $res = array("error" => "Ошибка! Максимальный вес файла - 1 Мб!");
             exit(json_encode($res));
@@ -199,7 +199,7 @@ if(!empty($data['detail'])) {
             exit(json_encode($res));
         }
         if(!in_array($_FILES[$name]['type'], $types)){
-            $res = array("error" => "Допустимые расширения - .gif, .jpg, .png");
+            $res = array("error" => "Допустимые расширения - .gif, .jpg, .png .webp");
             exit(json_encode($res));
         }
         $new_name = md5(time()).".$ext";
@@ -252,6 +252,9 @@ if(!empty($data['detail'])) {
             case("png"):
                 $img = imagecreatefrompng($target);
                 break;
+            case("webp"):
+                $img = imagecreatefromwebp($target);
+                break;
             default:
                 $img = imagecreatefromjpeg($target);
         }
@@ -267,6 +270,9 @@ if(!empty($data['detail'])) {
         switch($ext){
             case("gif"):
                 imagegif($newImg, $dest);
+                break;
+            case("webp"):
+                imagewebp($newImg, $dest);
                 break;
             case("png"):
                 imagepng($newImg, $dest);
@@ -286,7 +292,10 @@ $finish = $target;
         $main = "";
         switch($ext){
             case("gif"):
-                $main = imagecreatefromgif($finish);
+            $main = imagecreatefromgif($finish);
+            break;
+            case("webp"):
+                $main = imagecreatefromwebp($finish);
                 break;
             case("png"):
                 $main = imagecreatefrompng($finish);
@@ -317,6 +326,9 @@ $finish = $target;
                 break;
             case("png"):
                 imagepng($stamp, $dest);
+                break;
+            case("webp"):
+                imagewebp($stamp, $dest);
                 break;
             default:
                 imagejpeg($stamp, $dest);

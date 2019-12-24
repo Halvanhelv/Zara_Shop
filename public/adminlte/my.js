@@ -142,7 +142,7 @@ if(buttonSingle){
         data: {name: buttonSingle.data('name')},
         name: buttonSingle.data('name'),
         onSubmit: function(file, ext){
-            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+            if (! (ext && /^(jpg|png|jpeg|gif|webp)$/i.test(ext))){
                 alert('Ошибка! Разрешены только картинки');
                 return false;
             }
@@ -166,7 +166,7 @@ if(buttonMulti){
         data: {name: buttonMulti.data('name')},
         name: buttonMulti.data('name'),
         onSubmit: function(file, ext){
-            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+            if (! (ext && /^(jpg|png|jpeg|gif|webp)$/i.test(ext))){
                 alert('Ошибка! Разрешены только картинки');
                 return false;
             }
@@ -189,7 +189,7 @@ if(buttonSlider){
         data: {name: buttonSlider.data('name')},
         name: buttonSlider.data('name'),
         onSubmit: function(file, ext){
-            if (! (ext && /^(jpg|png|jpeg|gif)$/i.test(ext))){
+            if (! (ext && /^(jpg|png|jpeg|gif|webp)$/i.test(ext))){
                 alert('Ошибка! Разрешены только картинки');
                 return false;
             }
