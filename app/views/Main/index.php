@@ -158,7 +158,7 @@
                                 <span>30% off</span>
                                 <div class="product-action">
                                     <div class="product-action-style">
-                                        <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                        <a class="action-plus" title="Quick View" data-src="<?=$hit->alias;?>" data-toggle="modal" data-target="#exampleModal" href="#">
                                             <i class="ti-plus"></i>
                                         </a>
                                         <a class="action-heart" title="Wishlist" href="#">
@@ -203,7 +203,7 @@
                                     <span>30% off</span>
                                     <div class="product-action">
                                         <div class="product-action-style">
-                                            <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <a class="action-plus" title="Quick View" data-src="<?=$hit->alias;?>" data-toggle="modal" data-target="#exampleModal" href="#">
                                                 <i class="ti-plus"></i>
                                             </a>
                                             <a class="action-heart" title="Wishlist" href="#">
