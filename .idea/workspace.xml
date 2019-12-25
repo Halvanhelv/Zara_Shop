@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/admin/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Product/quick.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Product/quick.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/params.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminlte/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/adminlte/my.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/08c83c11c30c3bb8dd3ea5fb1e645598.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/1d63fa514e2b191546d227d7fffe0b31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/647800ef2c55ef94f10a66e4085f239e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/79c6fd4ec97ecaef6968e9daf5083a5b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/879cbc7c6288e8b2d90fbc16008529de.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/ae80fa369ba85ca63103f2307f443fd0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/b4e15c3bf121f286276cb6cf7a8264af.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" afterDir="false" />
@@ -80,7 +86,8 @@
       <workItem from="1577136922683" duration="11000" />
       <workItem from="1577137565802" duration="2311000" />
       <workItem from="1577185213563" duration="3892000" />
-      <workItem from="1577207080253" duration="4018000" />
+      <workItem from="1577207080253" duration="4372000" />
+      <workItem from="1577265763852" duration="5513000" />
     </task>
     <servers />
   </component>

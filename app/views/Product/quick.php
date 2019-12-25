@@ -4,34 +4,32 @@
         <div class="quick-view-learg-img">
             <div class="quick-view-tab-content tab-content">
                 <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                    <img src="images/<?=$alias->img?>" alt="">
+                    <img src="images/<?=$alias->img?>" alt="" style="max-height: 380px">
                 </div>
-                <div class="tab-pane fade" id="modal2" role="tabpanel">
-                    <img src="assets/img/quick-view/l2.jpg" alt="">
+                <?php foreach ($gallery as $item): ?>
+                <div class="tab-pane fade" id="modal<?=$item->id?>" role="tabpanel">
+                    <img src="images/<?=$item->img?>" style="max-height: 380px" alt="">
                 </div>
-                <div class="tab-pane fade" id="modal3" role="tabpanel">
-                    <img src="assets/img/quick-view/l3.jpg" alt="">
-                </div>
+<?php endforeach; ?>
             </div>
         </div>
         <div class="quick-view-list nav" role="tablist">
             <a class="active" href="#modal1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="home1">
-                <img src="assets/img/quick-view/s1.jpg" alt="">
+                <img src="images/<?=$alias->img?>" style="max-height: 112px" alt="">
             </a>
-            <a href="#modal2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home2">
-                <img src="assets/img/quick-view/s2.jpg" alt="">
+            <?php foreach ($gallery as $item): ?>
+            <a href="#modal<?=$item->id?>" data-toggle="tab"  role="tab" aria-selected="false" aria-controls="home3">
+                <img src="images/<?=$item->img?>" alt="" style="max-height: 112px">
             </a>
-            <a href="#modal3" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
-                <img src="assets/img/quick-view/s3.jpg" alt="">
-            </a>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="qwick-view-right">
         <div class="qwick-view-content">
-            <h3>Handcrafted Supper Mug</h3>
+            <h3><?=$alias->title?></h3>
             <div class="price">
-                <span class="new">$90.00</span>
-                <span class="old">$120.00  </span>
+                <span class="new"><?=$alias->pice?></span>
+                <span class="old"><?=$alias->old_pice?></span>
             </div>
             <div class="rating-number">
                 <div class="quick-view-rating">
@@ -76,3 +74,26 @@
         </div>
     </div>
 </div>
+<script>
+    /*----------------------------
+    	Cart Plus Minus Button
+    ------------------------------ */
+    $(".cart-plus-minus").prepend('<div class="dec qtybutton">-</div>');
+    $(".cart-plus-minus").append('<div class="inc qtybutton">+</div>');
+    $(".qtybutton").on("click", function() {
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+        if ($button.text() === "+") {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            // Don't allow decrementing below zero
+            if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        $button.parent().find("input").val(newVal);
+    });
+
+</script>
