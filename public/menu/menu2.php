@@ -1,10 +1,16 @@
+<?php if(isset($category['childs'])): ?>
+    <?php $child = 'cr-sub-dropdown sub-style' ?>
+    <?php $arrow = "<i class=\"ion-ios-arrow-down\"></i>" ?>
+<li class="<?=$child?>"><a href="#"><?=$category['title'];?> <?=$arrow?></a>
+    <ul>
 
-<div class="col-md-4">
-    <ul class="list-unstyled">
-        <li style="font-weight: bold">
-            <a href="category/<?=$category['alias'];?>"><?=$category['title'];?></a>
-        </li>
-        <?php if(isset($category['childs'])): ?>
-            <?= $this->getMenuHtml($category['childs'],$tab='',$tpl='3');?>
-        <?php endif; ?>
-</div>
+                <?= $this->getMenuHtml($category['childs'],$tab='',$tpl='3');?>
+
+
+
+    </ul>
+</li>
+<?php else: $child = '';$arrow = "";   ?>
+    <li class="<?=$child?>"><a href="#"><?=$category['title'];?> <?=$arrow?></a> </li>
+<?php endif; ?>
+

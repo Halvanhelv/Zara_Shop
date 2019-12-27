@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Product/quick.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Product/quick.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/watches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/menu/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/menu/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menu/brand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menu/menu2.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/menu/menu2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/menu/menu3.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/menu/menu3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/d41d8cd98f00b204e9800998ecf8427e.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/d8f64461fa85104a39f2162f647f08aa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../govno" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -72,7 +83,9 @@
       <workItem from="1577137565802" duration="2311000" />
       <workItem from="1577185213563" duration="3892000" />
       <workItem from="1577207080253" duration="4372000" />
-      <workItem from="1577265763852" duration="5687000" />
+      <workItem from="1577265763852" duration="6309000" />
+      <workItem from="1577390317517" duration="879000" />
+      <workItem from="1577399095164" duration="7737000" />
     </task>
     <servers />
   </component>

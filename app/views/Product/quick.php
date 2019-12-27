@@ -1,3 +1,4 @@
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <div class="preloader" style="display: none;margin: 0 auto"><img src="images/ring.svg" alt="" ></div>
 <div class="modal-body">
     <div class="qwick-view-left">
@@ -28,8 +29,8 @@
         <div class="qwick-view-content">
             <h3><?=$alias->title?></h3>
             <div class="price">
-                <span class="new"><?=$alias->pice?></span>
-                <span class="old"><?=$alias->old_pice?></span>
+                <span class="new"><?=$curr['symbol_left'];?><?=number_format($alias->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                <span class="old"><?=$curr['symbol_left'];?><?=number_format($alias->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
             </div>
             <div class="rating-number">
                 <div class="quick-view-rating">

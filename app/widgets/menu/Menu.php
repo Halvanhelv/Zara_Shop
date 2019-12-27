@@ -18,7 +18,7 @@ class Menu{
     public $tpl_num;
     protected $container = 'div';
     protected $table = 'category';
-    protected $cache = 3600;
+    protected $cache = 0;
     protected $cacheKey;
     protected $attrs = [];
     protected $prepend = '';
