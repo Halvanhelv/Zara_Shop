@@ -119,7 +119,7 @@
                                         <a class="action-heart" title="Wishlist" href="#">
                                             <i class="ti-heart"></i>
                                         </a>
-                                        <a class="action-cart" title="Add To Cart" href="#">
+                                        <a class="action-cart add-to-cart-link" data-id="<?=$hit->id;?>" title="Add To Cart" href="cart/add?id=<?=$hit->id;?>">
                                             <i class="ti-shopping-cart"></i>
                                         </a>
                                     </div>

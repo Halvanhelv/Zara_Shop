@@ -86,7 +86,7 @@ $('body').on('change', '.w_sidebar input', function() {
 /*Cart*/
 $('body').on('click', '.add-to-cart-link', function(e) {
     e.preventDefault();
-    var id = $(this).data('id'),
+        var id = $(this).data('id'),
         qty = $('.quantity input').val() ? $('.quantity input').val() : 1,
         mod = $('.available select').val();
     $.ajax({
@@ -107,7 +107,8 @@ $('body').on('click', '.add-to-cart-link', function(e) {
     });
 });
 
-$('#main_cart .dropdown-menu').on('click', '.del-item', function() {
+$('.cart-content').on('click', '.ti-trash', function() {
+    console.log(123);
     var id = $(this).data('id');
     $.ajax({
         url: '/cart/delete',
@@ -126,16 +127,18 @@ $('#main_cart .dropdown-menu').on('click', '.del-item', function() {
 
 function showCart(cart) {
 
-    $('#main_cart .dropdown-menu').html(cart);
+    $('.cart-content ul').html(cart);
 
 
-    if ($('.total_sum').text()) {
-        $('.total_count').html($('.top-cart-row .total_sum').text());
+    if ($('.total_sum').text() !=0) {
+        $('.cart-total span').html($('.cart-title span').text());
+        $('.header-site-icon .count-style').html($('.total_qty').text());
         $('.total_ajax_price').html($('.top-cart-row .total_sum').text());
         $('.tabled-data .total_ajax_price').html($('.top-cart-row .total_sum').text());
 
     } else {
         $('.total_count').text('Пусто');
+        $('.header-site-icon .count-style').text(0);
         $('#cart-page').remove().fadeOut(100);
         if(!$('.cart_view').siblings('.empty_cart').length > 0 && $(".cart_view").length)
         {

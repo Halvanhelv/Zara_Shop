@@ -66,7 +66,7 @@
                     <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
                 </div>
                 <div class="quickview-btn-cart">
-                    <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
+                    <a class="btn-style cr-btn add-to-cart-link" href="#"><span>add to cart</span></a>
                 </div>
                 <div class="quickview-btn-wishlist">
                     <a class="btn-hover cr-btn" href="#"><span><i class="ion-ios-heart-outline"></i></span></a>

@@ -2,6 +2,7 @@
     <?php $child = 'cr-dropdown' ?>
    <?php $arrow = "<i class=\"ion-ios-arrow-down\"></i>" ?>
 <?php else: $child = ''   ?>
+<?php $arrow = '' ?>
 <?php endif; ?>
 <ul>
 <li class="<?=$child?>">

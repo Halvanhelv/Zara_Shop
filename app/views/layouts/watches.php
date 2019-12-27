@@ -27,7 +27,6 @@
 
 </head>
 <body>
-
 <div class="wrapper">
     <header class="">
         <div class="header-area transparent-bar header-2 hm-4-padding">
@@ -82,7 +81,11 @@
                             <div class="header-cart same-style">
                                 <button class="sidebar-trigger">
                                     <i class="ti-shopping-cart"></i>
-                                    <span class="count-style">03</span>
+                                    <?php if (!empty($_SESSION['cart.qty'])): ?>
+                                    <span class="count-style"><?= $_SESSION['cart.qty'] ?></span>
+                                    <?php else: ?>
+                                        <span class="count-style">0</span>
+                                    <?php endif; ?>
                                 </button>
                             </div>
                         </div>
@@ -163,51 +166,32 @@
                 <div class="cart-content">
                     <h3>Shopping Cart</h3>
                     <ul>
-                        <li class="single-product-cart">
-                            <div class="cart-img">
-                                <a href="#"><img src="assets/img/cart/1.jpg" alt=""></a>
-                            </div>
-                            <div class="cart-title">
-                                <h3><a href="#"> Trucker Chair</a></h3>
-                                <span>1 x $140.00</span>
-                            </div>
-                            <div class="cart-delete">
-                                <a href="#"><i class="ti-trash"></i></a>
-                            </div>
-                        </li>
-                        <li class="single-product-cart">
-                            <div class="cart-img">
-                                <a href="#"><img src="assets/img/cart/2.jpg" alt=""></a>
-                            </div>
-                            <div class="cart-title">
-                                <h3><a href="#"> Reclining Sofa</a></h3>
-                                <span>1 x $140.00</span>
-                            </div>
-                            <div class="cart-delete">
-                                <a href="#"><i class="ti-trash"></i></a>
-                            </div>
-                        </li>
-                        <li class="single-product-cart">
-                            <div class="cart-img">
-                                <a href="#"><img src="assets/img/cart/3.jpg" alt=""></a>
-                            </div>
-                            <div class="cart-title">
-                                <h3><a href="#">Handmade Pot</a></h3>
-                                <span>1 x $140.00</span>
-                            </div>
-                            <div class="cart-delete">
-                                <a href="#"><i class="ti-trash"></i></a>
-                            </div>
-                        </li>
-                        <li class="single-product-cart">
-                            <div class="cart-total">
-                                <h4>Total : <span>$ 120</span></h4>
-                            </div>
-                        </li>
+                        <?php if(!empty($_SESSION['cart'])): ?>
+                            <?php foreach($_SESSION['cart'] as $id => $item): ?>
+                                <li class="single-product-cart">
+                                    <div class="cart-img">
+                                        <a href="#"><img src="images/<?= $item['img'];?> "  style="max-height: 80px" alt=""></a>
+                                    </div>
+                                    <div class="cart-title">
+                                        <h3><a href="#"><?=$item['title'];?></a></h3>
+                                        <span> <?=$item['qty'];?>  x <?=number_format($item['price'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?>  <?=$_SESSION['cart.currency']['symbol_right'] ;?></span>
+                                    </div>
+                                    <div class="cart-delete">
+                                        <a href="#"><i class="ti-trash" data-id="<?=$id;?>"></i></a>
+                                    </div>
+                                </li>
+
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                        <h1>Корзина Пуста</h1>
+                        <?php endif; ?>
+                        <div class="cart-total">
+                            <h4>Итого : <span><?= $_SESSION['cart.sum'] ?></span></h4>
+                        </div>
                     </ul>
                     <div class="cart-checkout-btn">
-                        <a class="cr-btn btn-style cart-btn-style" href="#"><span>view cart</span></a>
-                        <a class="no-mrg cr-btn btn-style cart-btn-style" href="#"><span>checkout</span></a>
+                        <a class="cr-btn btn-style cart-btn-style" href="#"><span>В корзину</span></a>
+                        <a class="no-mrg cr-btn btn-style cart-btn-style" href="#"><span>Купить</span></a>
                     </div>
                 </div>
             </div>
@@ -237,13 +221,12 @@
 <?=$content?>
 
 
-    <?php new \app\widgets\menu\Menu([
+    <?php new \ishop\libs\Layouts([
 
-        'tpl' => APP . '/views/layouts/default.php',
-        'tpl_num'=>'1',
-        'container'=>'footer'
+        'tpl' => APP . '/views/layouts/footer.php',
     ]); ?>
     <!-- modal -->
+
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
