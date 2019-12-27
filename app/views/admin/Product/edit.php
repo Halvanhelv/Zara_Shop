@@ -100,6 +100,11 @@
                         </div>
                         <div class="form-group">
                             <label>
+                                <input type="checkbox" name="best_seller" <?=$product->best_seller == "on" ? ' checked' : null;?>> Лучшие продажи
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
                                 <input type="checkbox" name="slider" <?=$product->slider == "on" ? ' checked' : null;?>> На слайдер
                             </label>
                         </div>

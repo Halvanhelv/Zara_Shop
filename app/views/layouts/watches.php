@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
 
 </head>
 <body>
@@ -190,7 +193,7 @@
                         </div>
                     </ul>
                     <div class="cart-checkout-btn">
-                        <a class="cr-btn btn-style cart-btn-style" href="#"><span>В корзину</span></a>
+                        <a class="cr-btn btn-style cart-btn-style" href="cart/view"><span>В корзину</span></a>
                         <a class="no-mrg cr-btn btn-style cart-btn-style" href="#"><span>Купить</span></a>
                     </div>
                 </div>
@@ -203,9 +206,9 @@
             <button class="search-close"><span class="ti-close"></span></button>
         </div>
         <div class="sidebar-search-input">
-            <form>
+            <form name="search" action="search" method="get" autocomplete="off" class="ui-widget">
                 <div class="form-search">
-                    <input id="search" class="input-text" value="" placeholder="Search Entire Store" type="search">
+                    <input id="search" class="input-text" value="" name="s" placeholder="Поиск" type="search">
                     <button>
                         <i class="ti-search"></i>
                     </button>
@@ -245,9 +248,11 @@
 </div>
 
 
+
 <!-- all js here -->
 <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="js/main.js"></script>
+
+
 <script src="assets/js/popper.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/isotope.pkgd.min.js"></script>
@@ -258,6 +263,23 @@
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $( function() {
 
+        $( "#search" ).autocomplete({
+
+
+            source: "search/typeahead",
+            minLength: 3,
+            select: function( event, ui ) {
+                console.log(ui.id);
+                window.location =  'product/' + encodeURIComponent(ui.item.id);
+            }
+
+        });
+    } );
+</script>
 </body>
 </html>

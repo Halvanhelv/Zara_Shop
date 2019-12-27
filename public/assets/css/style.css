@@ -511,7 +511,7 @@
 }
 .main-search-active.inside {
     transform: translateX(0px);
-    z-index: 9999;
+    z-index: 99;
 }
 .sidebar-search-input {
     padding: 300px 0 0;
@@ -1638,7 +1638,7 @@ input.cart-plus-minus-box {
 }
 
 .sidebarmenu-style nav.menu ul li ul li.sub-style > a > i {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .newsletter-title {
@@ -2913,9 +2913,9 @@ button.cr-btn:hover b {
     color: #fff;
 }
 .contact-message p{
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #555;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #555;
 }
 
 

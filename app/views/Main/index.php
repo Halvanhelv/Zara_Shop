@@ -89,66 +89,44 @@
             <h2>Our Collection</h2>
         </div>
         <div class="product-tab-list text-center mb-60 nav product-menu-mrg" role="tablist">
-            <a class="active" href="#home1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="home1">
-                <h4>Featured </h4>
+            <?php if (isset($latest) && !empty($latest)): ?>
+            <?php $class = 'active';$area = 'true'?>
+            <a class="<?=$class ?>" href="#home1" data-toggle="tab" role="tab" aria-selected="<?= $area ?>" aria-controls="home1">
+                <h4>Новинки </h4>
             </a>
-            <a href="#home2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home2">
-                <h4> Latest </h4>
+            <?php endif; ?>
+            <?php if (isset($featured) && !empty($featured)): ?>
+            <?php if (!isset($latest) || empty($latest)): ?>
+                <?php $class = 'active';$area = 'true'?>
+                <?php else: ?>
+                    <?php $class = '';$area = 'false'?>
+            <?php endif; ?>
+
+            <a href="#home2" class="<?= $class?>"  data-toggle="tab" role="tab" aria-selected="<?= $area ?>" aria-controls="home2">
+                <h4> Популярно </h4>
             </a>
-            <a href="#home3" data-toggle="tab" role="tab" aria-selected="false" aria-controls="home3">
-                <h4>Best Seller</h4>
+            <?php endif; ?>
+            <?php if (isset($best_seller) && !empty($best_seller)): ?>
+                <?php if (empty($featured) && empty($latest)): ?>
+                    <?php $class = 'active';$area = 'true'?>
+                <?php else: ?>
+                    <?php $class = '';$area = 'false'?>
+                <?php endif; ?>
+            <a href="#home3" data-toggle="tab" class="<?= $class?>" role="tab" aria-selected="<?= $area ?>" aria-controls="home3">
+                <h4>Лидер продаж</h4>
             </a>
+            <?php endif; ?>
         </div>
         <div class="tab-content">
-            <?php if (isset($hits)): ?>
-            <div class="tab-pane active" id="home1" role="tabpanel">
+
+            <?php if (!empty($latest)): ?>
+            <?php if(empty($featured) || !isset($featured) ): ?>
+                <?php $class = "active" ?>
+                <?php else: $class = "" ?>
+                    <?php endif; ?>
+            <div class="tab-pane <?= $class?>" id="home1" role="tabpanel">
                 <div class="row">
-                    <?php foreach ($hits as $hit): ?>
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="product-wrapper mb-45">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="images/<?=$hit->img;?>" alt="" >
-                                </a>
-                                <span>30% off</span>
-                                <div class="product-action">
-                                    <div class="product-action-style">
-                                        <a class="action-plus" title="Quick View" data-toggle="modal" data-src="<?=$hit->alias;?>" data-target="#exampleModal" href="#">
-                                            <i class="ti-plus"></i>
-                                        </a>
-                                        <a class="action-heart" title="Wishlist" href="#">
-                                            <i class="ti-heart"></i>
-                                        </a>
-                                        <a class="action-cart add-to-cart-link" data-id="<?=$hit->id;?>" title="Add To Cart" href="cart/add?id=<?=$hit->id;?>">
-                                            <i class="ti-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-content text-center">
-                                <h4><a href="product-details.html">Rattan Tissue Holder</a></h4>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star-outline"></i>
-                                    <i class="ion-ios-star-outline"></i>
-                                    <i class="ion-ios-star-outline"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old"></span>
-                                    <span><?=$curr['symbol_left'];?><?=number_format($hit->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   <?php endforeach; ?>
-                </div>
-            </div>
-            <?php endif; ?>
-            <?php if (isset($hits)): ?>
-            <div class="tab-pane" id="home2" role="tabpanel">
-                <div class="row">
-                    <?php foreach ($hits as $hit): ?>
+                    <?php foreach ($latest as $hit): ?>
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="product-wrapper mb-45">
                             <div class="product-img">
@@ -190,10 +168,59 @@
                 </div>
             </div>
             <?php endif; ?>
-            <?php if (isset($hits)): ?>
-            <div class="tab-pane" id="home3" role="tabpanel">
+            <?php if (!empty($featured)): ?>
+                <div class="tab-pane active" id="home2" role="tabpanel">
+                    <div class="row">
+                        <?php foreach ($featured as $hit): ?>
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                <div class="product-wrapper mb-45">
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="images/<?=$hit->img;?>" alt="" >
+                                        </a>
+                                        <span>30% off</span>
+                                        <div class="product-action">
+                                            <div class="product-action-style">
+                                                <a class="action-plus" title="Quick View" data-toggle="modal" data-src="<?=$hit->alias;?>" data-target="#exampleModal" href="#">
+                                                    <i class="ti-plus"></i>
+                                                </a>
+                                                <a class="action-heart" title="Wishlist" href="#">
+                                                    <i class="ti-heart"></i>
+                                                </a>
+                                                <a class="action-cart add-to-cart-link" data-id="<?=$hit->id;?>" title="Add To Cart" href="cart/add?id=<?=$hit->id;?>">
+                                                    <i class="ti-shopping-cart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content text-center">
+                                        <h4><a href="product-details.html">Rattan Tissue Holder</a></h4>
+                                        <div class="product-rating">
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star-outline"></i>
+                                            <i class="ion-ios-star-outline"></i>
+                                            <i class="ion-ios-star-outline"></i>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="old"></span>
+                                            <span><?=$curr['symbol_left'];?><?=number_format($hit->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($best_seller)): ?>
+                <?php if(empty($featured && $latest)): ?>
+                    <?php $class = "active" ?>
+                <?php else: $class = "" ?>
+                <?php endif; ?>
+            <div class="tab-pane <?= $class ?>" id="home3" role="tabpanel">
                 <div class="row">
-                    <?php foreach ($hits as $hit): ?>
+                    <?php foreach ($best_seller as $hit): ?>
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="product-wrapper mb-45">
                                 <div class="product-img">

@@ -88,6 +88,11 @@
                         </div>
                         <div class="form-group">
                             <label>
+                                <input type="checkbox" name="best_seller"> Лучшие продажи
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
                                 <input type="checkbox" name="hit"> Популярно
                             </label>
                         </div>

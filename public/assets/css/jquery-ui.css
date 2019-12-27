@@ -652,3 +652,7 @@ button.ui-button::-moz-focus-inner {
 	filter: Alpha(Opacity=30); /* support: IE8 */
 	border-radius: 8px;
 }
+
+.ui-autocomplete {
+	z-index: 99999 !important;
+}

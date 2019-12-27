@@ -20,6 +20,7 @@ class Product extends AppModel {
         'brand_id' =>'',
         'slider_text' =>'',
         'slider' =>'',
+        'best_seller' => '',
     ];
 
     public $rules = [
