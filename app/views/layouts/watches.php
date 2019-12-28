@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/bundle.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/easyzoom.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.min.css">
@@ -30,6 +31,7 @@
 
 </head>
 <body>
+
 <div class="wrapper">
     <header class="">
         <div class="header-area transparent-bar header-2 hm-4-padding">

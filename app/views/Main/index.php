@@ -130,7 +130,7 @@
                     <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="product-wrapper mb-45">
                             <div class="product-img">
-                                <a href="#">
+                                <a href="product/<?=$hit->alias;?>">
                                     <img src="images/<?=$hit->img;?>" alt="" >
                                 </a>
                                 <span>30% off</span>
@@ -149,7 +149,7 @@
                                 </div>
                             </div>
                             <div class="product-content text-center">
-                                <h4><a href="product-details.html">Rattan Tissue Holder</a></h4>
+                                <h4><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h4>
                                 <div class="product-rating">
                                     <i class="ion-ios-star"></i>
                                     <i class="ion-ios-star"></i>
@@ -175,7 +175,7 @@
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="product-wrapper mb-45">
                                     <div class="product-img">
-                                        <a href="#">
+                                        <a href="product/<?=$hit->alias;?>">
                                             <img src="images/<?=$hit->img;?>" alt="" >
                                         </a>
                                         <span>30% off</span>
@@ -194,7 +194,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content text-center">
-                                        <h4><a href="product-details.html">Rattan Tissue Holder</a></h4>
+                                        <h4><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h4>
                                         <div class="product-rating">
                                             <i class="ion-ios-star"></i>
                                             <i class="ion-ios-star"></i>
@@ -224,7 +224,7 @@
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="product-wrapper mb-45">
                                 <div class="product-img">
-                                    <a href="#">
+                                    <a href="product/<?=$hit->alias;?>">
                                         <img src="images/<?=$hit->img;?>" alt="" >
                                     </a>
                                     <span>30% off</span>
@@ -243,7 +243,7 @@
                                     </div>
                                 </div>
                                 <div class="product-content text-center">
-                                    <h4><a href="product-details.html">Rattan Tissue Holder</a></h4>
+                                    <h4><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h4>
                                     <div class="product-rating">
                                         <i class="ion-ios-star"></i>
                                         <i class="ion-ios-star"></i>
