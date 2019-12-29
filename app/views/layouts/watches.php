@@ -169,13 +169,13 @@
                     <button class="op-sidebar-close"><span class="ti-close"></span></button>
                 </div>
                 <div class="cart-content">
-                    <h3>Shopping Cart</h3>
+                    <h3>Корзина покупок</h3>
                     <ul>
                         <?php if(!empty($_SESSION['cart'])): ?>
                             <?php foreach($_SESSION['cart'] as $id => $item): ?>
                                 <li class="single-product-cart">
                                     <div class="cart-img">
-                                        <a href="#"><img src="images/<?= $item['img'];?> "  style="max-height: 80px" alt=""></a>
+                                        <a href="#"><img src="images/background/80on80/<?= $item['img'];?> "  style="max-height: 80px" alt=""></a>
                                     </div>
                                     <div class="cart-title">
                                         <h3><a href="#"><?=$item['title'];?></a></h3>
@@ -191,13 +191,17 @@
                         <h1>Корзина Пуста</h1>
                         <?php endif; ?>
                         <div class="cart-total">
+                            <?php if (!empty($_SESSION['cart.sum'])): ?>
                             <h4>Итого : <span><?= $_SESSION['cart.sum'] ?></span></h4>
+                            <?php endif; ?>
                         </div>
                     </ul>
+                    <?php if (!empty($_SESSION['cart'])):?>
                     <div class="cart-checkout-btn">
                         <a class="cr-btn btn-style cart-btn-style" href="cart/view"><span>В корзину</span></a>
                         <a class="no-mrg cr-btn btn-style cart-btn-style" href="#"><span>Купить</span></a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

@@ -5,22 +5,22 @@
         <div class="quick-view-learg-img">
             <div class="quick-view-tab-content tab-content">
                 <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                    <img src="images/<?=$alias->img?>" alt="" style="max-height: 380px">
+                    <img src="images/background/320on380/<?=$alias->img?>" alt="" style="max-height: 380px">
                 </div>
                 <?php foreach ($gallery as $item): ?>
                 <div class="tab-pane fade" id="modal<?=$item->id?>" role="tabpanel">
-                    <img src="images/<?=$item->img?>" style="max-height: 380px" alt="">
+                    <img src="images/background/320on380/<?=$item->img?>"  alt="">
                 </div>
 <?php endforeach; ?>
             </div>
         </div>
         <div class="quick-view-list nav" role="tablist">
             <a class="active" href="#modal1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="home1">
-                <img src="images/<?=$alias->img?>" style="max-height: 112px" alt="">
+                <img src="images/background/100on112/<?=$alias->img?>" style="max-height: 112px" alt="">
             </a>
             <?php foreach ($gallery as $item): ?>
             <a href="#modal<?=$item->id?>" data-toggle="tab"  role="tab" aria-selected="false" aria-controls="home3">
-                <img src="images/<?=$item->img?>" alt="" style="max-height: 112px">
+                <img src="images/background/100on112/<?=$item->img?>" alt="" style="max-height: 112px">
             </a>
             <?php endforeach; ?>
         </div>

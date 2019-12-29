@@ -5,7 +5,7 @@
         <?php foreach($_SESSION['cart'] as $id => $item): ?>
         <li class="single-product-cart">
             <div class="cart-img">
-                <a href="#"><img src="images/<?= $item['img'];?> "  style="max-height: 80px" alt=""></a>
+                <a href="#"><img src="images/background/80on80/<?= $item['img'];?> "   alt=""></a>
             </div>
             <div class="cart-title">
                 <h3><a href="#"><?=$item['title'];?></a></h3>

@@ -35,27 +35,61 @@ class ProductController extends AppController {
     }
 
     public function addImageAction(){
+        $name = $_POST['name'];
+        $product = new Product();
+        $file_name = md5(time());
         if(isset($_GET['upload'])){
             if($_POST['name'] == 'single'){
-                $wmax = App::$app->getProperty('img_width');
-                $hmax = App::$app->getProperty('img_height');
-                $background = App::$app->getProperty('img_background');
-            }elseif($_POST['name'] == 'multi'){
-                $wmax = App::$app->getProperty('gallery_width');
-                $hmax = App::$app->getProperty('gallery_height');
-                $background = App::$app->getProperty('gallery_background');
+
+                foreach(App::$app->getProperty('img') as $item)
+                {
+                    $background = $item[2];
+                    $wmax = $item[0];
+                    $hmax = $item[1];
+                    $upload = $item[3];
+
+             $product->uploadImg($name, $wmax, $hmax,$background,$upload,$file_name);
+
+                }
+
+                exit(json_encode(array("file" => $_SESSION['single'])));
+
             }
+            elseif($_POST['name'] == 'multi') {
+
+                foreach (App::$app->getProperty('gallery') as $item)
+                {
+
+                    $background = $item[2];
+                $wmax = $item[0];
+                $hmax = $item[1];
+                $upload = $item[3];
+                $product->uploadImg($name, $wmax, $hmax, $background, $upload,$file_name);
+
+            }
+            exit(json_encode(array("file" => end($_SESSION['multi']))));
+            }
+
             else{
-                $wmax = App::$app->getProperty('slider_width');
-                $hmax = App::$app->getProperty('slider_height');
-                $background = App::$app->getProperty('slider_background');
+
+                foreach (App::$app->getProperty('slider') as $item)
+                {
+                    $background = $item[2];
+                    $wmax = $item[0];
+                    $hmax = $item[1];
+                    $upload = $item[3];
+
+                    $product->uploadImg($name, $wmax, $hmax, $background, $upload,$file_name);
+
+                }
+                exit(json_encode(array("file" => $_SESSION['slider'])));
             }
-            $name = $_POST['name'];
-            $product = new Product();
-            $product->uploadImg($name, $wmax, $hmax,$background);
+
+
 
 
         }
+
     }
 
     public function editAction(){

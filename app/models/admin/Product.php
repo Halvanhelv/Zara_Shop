@@ -186,12 +186,12 @@ if(!empty($data['detail'])) {
         }
     }
 
-    public function uploadImg($name, $wmax, $hmax,$background){
-        $uploaddir = WWW . '/images/';
+    public function uploadImg($name, $wmax, $hmax,$background,$upload,$file_name){
+        $uploaddir = WWW . '/images/background/' . $upload . "/" ;
         $defaultbackground = $background;
         $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
         $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png","image/webp"); // массив допустимых расширений
-        if($_FILES[$name]['size'] > 1048576){
+        if($_FILES[$name]['size'] > 4048576){
             $res = array("error" => "Ошибка! Максимальный вес файла - 1 Мб!");
             exit(json_encode($res));
         }
@@ -203,29 +203,35 @@ if(!empty($data['detail'])) {
             $res = array("error" => "Допустимые расширения - .gif, .jpg, .png .webp");
             exit(json_encode($res));
         }
-        $new_name = md5(time()).".$ext";
-
+        $new_name =  $file_name . ".$ext";
         $uploadfile = $uploaddir.$new_name;
-
-        if(@move_uploaded_file($_FILES[$name]['tmp_name'], $uploadfile)){
+        if(@copy($_FILES[$name]['tmp_name'], $uploadfile)){
 
             if($name == 'single'){
                 $_SESSION['single'] = $new_name;
-            }elseif($name == 'multi'){
-                $_SESSION['multi'][] = $new_name;
+            }
+
+            elseif($name == 'multi') {
+                    if (!in_array($new_name,$_SESSION['multi'])) {
+                        $_SESSION['multi'][] = $new_name;
+                    }
+                }
+
             }
         elseif($name == 'slider'){
+
             $_SESSION['slider'] = $new_name;
         }
 
             self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
             self::overlay($uploadfile,$uploadfile, $defaultbackground, $ext);
-            $res = array("file" => $new_name);
 
-            exit(json_encode($res));
+
+
         }
-        exit("файл не переместился");
-    }
+
+
+
 
     /**
      * @param string $target путь к оригинальному файлу

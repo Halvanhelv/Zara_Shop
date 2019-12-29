@@ -5,23 +5,23 @@
         $cats = \ishop\App::$app->getProperty('cats');
         ?>
         <div class="row">
-            <?php if($gallery): ?>
+
             <div class="col-lg-6">
                 <div class="product-details-img-content">
                     <div class="product-details-tab mr-40">
                         <div class="product-details-large tab-content">
                             <div class="tab-pane active" id="pro-details<?=$product->id;?>">
                                 <div class="easyzoom easyzoom--overlay">
-                                    <a href="images/<?=$product->img;?>">
-                                        <img src="images/<?=$product->img;?>" alt="">
+                                    <a href="images/background/1200on1125/<?=$product->img;?>">
+                                        <img src="images/background/600on656/<?=$product->img;?>" alt="">
                                     </a>
                                 </div>
                             </div>
                             <?php foreach($gallery as $item): ?>
                             <div class="tab-pane" id="pro-details<?=$item->id?>">
                                 <div class="easyzoom easyzoom--overlay">
-                                    <a href="images/<?=$item->img;?>">
-                                        <img src="images/<?=$item->img;?>" alt="">
+                                    <a href="images/background/1200on1125/<?=$item->img;?>">
+                                        <img src="images/background/600on656/<?=$item->img;?>" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -29,18 +29,14 @@
                         </div>
                         <div class="product-details-small nav mt-12 product-dec-slider owl-carousel">
                             <a class="active" href="#pro-details<?=$product->id;?>">
-                                <img src="images/<?=$product->img;?>" alt="">
+                                <img src="images/background/141on135/<?=$product->img;?>" alt="">
                             </a>
-                            <?php foreach($gallery as $item): ?>
-                            <a href="#pro-details<?=$item->id?>">
-                                <img src="images/<?=$item->img;?>" alt="">
-                            </a>
-                            <?php endforeach; ?>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <?php endif;?>
+
             <div class="col-lg-6">
                 <div class="product-details-content">
                     <h2>Awesome Bracelet </h2>

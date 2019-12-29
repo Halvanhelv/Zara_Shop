@@ -154,7 +154,8 @@ if(buttonSingle){
                 buttonSingle.closest('.file-upload').find('.overlay').css({'display':'none'});
 
                 response = JSON.parse(response);
-                $('.' + buttonSingle.data('name')).html('<img  data-src = (' + response.file + ') src="/images/' + response.file + '" style="max-height: 150px;" class="d del-item" >');
+                $('.' + buttonSingle.data('name')).html('<img  data-src = (' + response.file + ') src="/images/background/270on236/' + response.file + '" style="max-height: 150px;" class="d del-item" >');
+                console.log(response.file);
             }, 1000);
         }
     });
@@ -178,7 +179,7 @@ if(buttonMulti){
                 buttonMulti.closest('.file-upload').find('.overlay').css({'display':'none'});
 
                 response = JSON.parse(response);
-                $('.' + buttonMulti.data('name')).append('<img  data-src = ' + response.file +'  src="/images/' + response.file + '" style="max-height: 150px;" class="del_img" > ');
+                $('.' + buttonMulti.data('name')).append('<img  data-src = ' + response.file +'  src="/images/background/270on236/' + response.file + '" style="max-height: 150px;" class="del_img" > ');
             }, 1000);
         }
     });
@@ -201,7 +202,7 @@ if(buttonSlider){
                 buttonSlider.closest('.file-upload').find('.overlay').css({'display':'none'});
 
                 response = JSON.parse(response);
-                $('.' + buttonSlider.data('name')).html('<img  data-src = (' + response.file + ') src="/images/' + response.file + '" style="max-height: 150px;" class=" del-item" >');
+                $('.' + buttonSlider.data('name')).html('<img  data-src = (' + response.file + ') src="/images/background/508on544/' + response.file + '" style="max-height: 150px;" class=" del-item" >');
             }, 1000);
         }
     });

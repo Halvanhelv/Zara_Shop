@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="slider-single-img slider-animated-1">
-                            <img class="animated" style="min-height: 544px;" src="images/<?=$brand->slider_img;?>" alt="slider images">
+                            <img class="animated" style="min-height: 544px;" src="images/background/508on544/<?=$brand->slider_img;?>" alt="slider images">
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                         <div class="product-wrapper mb-45">
                             <div class="product-img">
                                 <a href="product/<?=$hit->alias;?>">
-                                    <img src="images/<?=$hit->img;?>" alt="" >
+                                    <img src="images/background/270on236/<?=$hit->img;?>" alt="" >
                                 </a>
                                 <span>30% off</span>
                                 <div class="product-action">
@@ -176,7 +176,7 @@
                                 <div class="product-wrapper mb-45">
                                     <div class="product-img">
                                         <a href="product/<?=$hit->alias;?>">
-                                            <img src="images/<?=$hit->img;?>" alt="" >
+                                            <img src="images/background/270on236/<?=$hit->img;?>" alt="" >
                                         </a>
                                         <span>30% off</span>
                                         <div class="product-action">
@@ -225,7 +225,7 @@
                             <div class="product-wrapper mb-45">
                                 <div class="product-img">
                                     <a href="product/<?=$hit->alias;?>">
-                                        <img src="images/<?=$hit->img;?>" alt="" >
+                                        <img src="images/background/270on236/<?=$hit->img;?>" alt="" >
                                     </a>
                                     <span>30% off</span>
                                     <div class="product-action">
