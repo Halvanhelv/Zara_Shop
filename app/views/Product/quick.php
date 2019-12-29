@@ -16,11 +16,11 @@
         </div>
         <div class="quick-view-list nav" role="tablist">
             <a class="active" href="#modal1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="home1">
-                <img src="images/background/100on112/<?=$alias->img?>" style="max-height: 112px" alt="">
+                <img src="images/background/100on112/<?=$alias->img?>" alt="">
             </a>
             <?php foreach ($gallery as $item): ?>
             <a href="#modal<?=$item->id?>" data-toggle="tab"  role="tab" aria-selected="false" aria-controls="home3">
-                <img src="images/background/100on112/<?=$item->img?>" alt="" style="max-height: 112px">
+                <img src="images/background/100on112/<?=$item->img?>" alt="" >
             </a>
             <?php endforeach; ?>
         </div>
