@@ -87,8 +87,9 @@ $('body').on('change', '.w_sidebar input', function() {
 $('body').on('click', '.add-to-cart-link', function(e) {
     e.preventDefault();
         var id = $(this).data('id'),
-        qty = $('.quantity input').val() ? $('.quantity input').val() : 1,
+        qty = $('.quickview-plus-minus input').val() ? $('.quickview-plus-minus input').val() : 1,
         mod = $('.available select').val();
+        console.log(qty);
     $.ajax({
         url: '/cart/add',
         data: {
@@ -107,7 +108,7 @@ $('body').on('click', '.add-to-cart-link', function(e) {
     });
 });
 
-$('.cart-content').on('click', '.ti-trash', function() {
+$('.cart-content').on('click', '.del-item', function() {
     console.log(123);
     var id = $(this).data('id');
     $.ajax({

@@ -182,7 +182,7 @@
                                         <span> <?=$item['qty'];?>  x <?=number_format($item['price'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?>  <?=$_SESSION['cart.currency']['symbol_right'] ;?></span>
                                     </div>
                                     <div class="cart-delete">
-                                        <a href="#"><i class="ti-trash" data-id="<?=$id;?>"></i></a>
+                                        <a href="#" class="del-item" data-id="<?=$id;?>"><i class="ti-trash" ></i></a>
                                     </div>
                                 </li>
 

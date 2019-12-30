@@ -216,12 +216,13 @@ if(!empty($data['detail'])) {
                         $_SESSION['multi'][] = $new_name;
                     }
                 }
+            elseif($name == 'slider'){
+
+                $_SESSION['slider'] = $new_name;
+            }
 
             }
-        elseif($name == 'slider'){
 
-            $_SESSION['slider'] = $new_name;
-        }
 
             self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
             self::overlay($uploadfile,$uploadfile, $defaultbackground, $ext);

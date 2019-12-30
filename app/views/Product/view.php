@@ -31,6 +31,11 @@
                             <a class="active" href="#pro-details<?=$product->id;?>">
                                 <img src="images/background/141on135/<?=$product->img;?>" alt="">
                             </a>
+                            <?php  foreach ($gallery as $item):?>
+                                <a class="active" href="#pro-details<?=$item->id;?>">
+                                    <img src="images/background/141on135/<?=$item->img;?>" alt="">
+                                </a>
+                            <?php endforeach; ?>
 
                         </div>
                     </div>
@@ -39,7 +44,7 @@
 
             <div class="col-lg-6">
                 <div class="product-details-content">
-                    <h2>Awesome Bracelet </h2>
+                    <h2><?= $product->title ?></h2>
                     <div class="product-rating">
                         <i class="ion-ios-star"></i>
                         <i class="ion-ios-star"></i>
@@ -53,7 +58,7 @@
                         <span><?=$curr['symbol_left'];?><?=$product->price * $curr['value'];?><?=$curr['symbol_right'];?></span>
                     </div>
                     <div class="product-overview">
-                        <h5 class="pd-sub-title">Product Overview</h5>
+                        <h5 class="pd-sub-title">Обзор продукта</h5>
                         <p><?=$product->content;?></p>
                     </div>
                     <div class="product-size">
@@ -89,10 +94,10 @@
                     </div>
                     <div class="quickview-plus-minus">
                         <div class="cart-plus-minus">
-                            <input type="text" value="1" name="qtybutton" class="cart-plus-minus-box">
+                            <input type="text" value="1" readonly name="qtybutton" class="cart-plus-minus-box">
                         </div>
                         <div class="quickview-btn-cart">
-                            <a class="btn-style cr-btn" href="#"><span>В корзину</span></a>
+                            <a class="btn-style cr-btn add-to-cart-link" href="cart/add?id=<?=$product->id;?>" data-id="<?=$product->id;?>"<span>В корзину</span></a>
                         </div>
                         <div class="quickview-btn-wishlist">
                             <a class="btn-hover cr-btn" href="#"><span><i class="ion-ios-heart-outline"></i></span></a>
@@ -119,7 +124,7 @@
                         </ul>
                     </div>
                     <div class="product-share">
-                        <h5 class="pd-sub-title">Share</h5>
+                        <h5 class="pd-sub-title">Поделиться</h5>
                         <ul>
                             <li>
                                 <a href="#"><i class="ion-social-twitter"></i></a>

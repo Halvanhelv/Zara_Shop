@@ -2,353 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Product/quick.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Product/quick.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/b35305c32c3712c4b466af6e56830602.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/100on112/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/3cad5af13396bc10dd895727d79f4fd1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/1200on1125/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/bad57ad3a79576eda1e13473583cb774.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/141on135/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/bad57ad3a79576eda1e13473583cb774.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/270on236/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/b35305c32c3712c4b466af6e56830602.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/310on375/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/191e0b96eb1dda62e62bd7a56a58ecbd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/320on380/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/191e0b96eb1dda62e62bd7a56a58ecbd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/1fc9be18d435d453e5f74ac72ad6c928.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/4995d39acd89a44cfab15b7e867c951e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/5db887f3a2184daeb92619f72c868ac4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/508on544/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/32f9e643f84cf1a319afd5b78595a9bc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/600on656/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/07e07cd11af15cd1bb323bdd46b5482d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/10cd8aa52be5a5dfb352673f208bb5e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/1d763e35d7a624dcf362f3ba4797b208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/297b39be8232f5cc27d92057024c665c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/2a1ee532ea6f28f8bacf104d4e35a0e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/2d798603d2339d67e74f36c4c1a3ffae.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/2f8a598b3f856cf751e9fdede6cba3b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/2f9c45c8506307876aa3b2c8c013def3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/2fcc51e7520168e4b47604523bc6b2a9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/39673e08ca62305db3eca7ec7c7d4d2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/3ed57ad51c8055d185613448c831351e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/5329d63bb55cc78a50164b634b2b1b66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/5e2eaa8f93fc4e5caa71a0cd79dfd24a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/62081a1a81d345139906ffab21fddd30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/6ff6ec2bd9e33cd2eca5029e68a2da33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/74bb3bad4a091ec93001e72435be2514.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/763f01170e19cde7635bb74c47b8757c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/779e8209a060468bdd5ac1955a8cbef1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/7a08fecd34f64dec5a37c0ffaa2fca19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/7d40031aca25dae0832103ff1c9a7f1c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/7d76aa45e23f5b6fbf25f443b0d918df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/7faaa9d39aeeb3272e33d964e7fb9a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/80ea03232c2a6422883c6ccb06d519c2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/89876d3fcd37b32bf052006d508b3a4c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/973b6180cd7190dc144b4134253c3829.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/9e17b8100050b664eee566cd1c206bdd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/a2e2dbf68a0c751c1c659b4121ce58e0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/a3b13da57b3951b7ca69a0f922c1d46e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/bad57ad3a79576eda1e13473583cb774.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/c67b30b2dbe073a2d2485226425d8d34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/ce62a5cef5eb7fc632b966405ee0ffe0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/d24a06da68c9ed11551951bfe42fe0f9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/ddd0f2513797fced30c23b55d2a6c40b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/e1e46a886b6a15175cb00464f642d96c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/e89a8f02c9d55c5d3426f4d94b63f9df.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/ef895c28664ed09e938a590e92d0d122.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/f1bf0b90509d01ebf6348ff0c5dd0946.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/background/80on80/f8cf1bc3ca88a3a4af21f52b30256c30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/admin/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/admin/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Cart/cart_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Cart/cart_modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Product/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Product/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/watches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/c799f92d1280fb7a5aefeba08b6fae16.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/d8f64461fa85104a39f2162f647f08aa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/d8f64461fa85104a39f2162f647f08aa.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
@@ -389,8 +51,9 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../govno" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -425,7 +88,8 @@
       <workItem from="1577390317517" duration="879000" />
       <workItem from="1577399095164" duration="8489000" />
       <workItem from="1577443450473" duration="45174000" />
-      <workItem from="1577634599305" duration="17769000" />
+      <workItem from="1577634599305" duration="17941000" />
+      <workItem from="1577721289139" duration="5671000" />
     </task>
     <servers />
   </component>
@@ -444,5 +108,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Zara" />
+    </ignored-roots>
   </component>
 </project>
