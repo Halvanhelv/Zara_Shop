@@ -196,12 +196,12 @@
                             <?php endif; ?>
                         </div>
                     </ul>
-                    <?php if (!empty($_SESSION['cart'])):?>
+
                     <div class="cart-checkout-btn">
                         <a class="cr-btn btn-style cart-btn-style" href="cart/view"><span>В корзину</span></a>
                         <a class="no-mrg cr-btn btn-style cart-btn-style" href="#"><span>Купить</span></a>
                     </div>
-                    <?php endif; ?>
+                 
                 </div>
             </div>
         </div>

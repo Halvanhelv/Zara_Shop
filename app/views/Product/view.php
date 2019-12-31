@@ -1,3 +1,13 @@
+<div class="breadcrumb-area mt-37 hm-4-padding">
+    <div class="container-fluid">
+        <div class="breadcrumb-content text-center border-top-2">
+            <h2>product details gallery</h2>
+            <ul>
+                <?=$breadcrumbs;?>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class="product-details-area hm-3-padding ptb-130">
     <div class="container-fluid">
         <?php

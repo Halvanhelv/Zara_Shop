@@ -108,7 +108,8 @@ $('body').on('click', '.add-to-cart-link', function(e) {
     });
 });
 
-$('.cart-content').on('click', '.del-item', function() {
+$('.cart-content').on('click', '.del-item', function(e) {
+    e.preventDefault();
     console.log(123);
     var id = $(this).data('id');
     $.ajax({

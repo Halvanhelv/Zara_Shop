@@ -9,14 +9,14 @@ class Breadcrumbs{
     public static function getBreadcrumbs($category_id, $name = ''){
         $cats = App::$app->getProperty('cats');
         $breadcrumbs_array = self::getParts($cats, $category_id);
-        $breadcrumbs = "<li class='breadcrumb-item'><a href='" . PATH . "'>Главная</a></li>";
+        $breadcrumbs = "<li class=''><a href='" . PATH . "'>Главная</a></li>";
         if($breadcrumbs_array){
             foreach($breadcrumbs_array as $alias => $title){
-                $breadcrumbs .= "<li class='breadcrumb-item'><a href='" . PATH . "/category/{$alias}'>{$title}</a></li>";
+                $breadcrumbs .= "<li class=''><a href='" . PATH . "/category/{$alias}'>{$title}</a></li>";
             }
         }
         if($name){
-            $breadcrumbs .= "<li class='breadcrumb-item current'><a href='" . PATH . "/category/{$alias}/{$name}'>$name</a></li>";
+            $breadcrumbs .= "<li>$name</li>";
         }
         return $breadcrumbs;
     }
