@@ -80,6 +80,10 @@ class Pagination{
         if(count($matches[0]) > 1){
             $url = preg_replace("#filter=[\d,&]+#", "", $url, 1);
         }
+        preg_match_all("#price=[\d,&]+#", $url, $matches);
+        if(count($matches[0]) > 1){
+            $url = preg_replace("#price=[\d,&]+#", "", $url, 1);
+        }
         $url = explode('?', $url);
         $uri = $url[0] . '?';
         if(isset($url[1]) && $url[1] != ''){
