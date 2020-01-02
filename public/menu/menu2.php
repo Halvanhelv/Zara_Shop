@@ -11,6 +11,6 @@
     </ul>
 </li>
 <?php else: $child = '';$arrow = "";   ?>
-    <li class="<?=$child?>"><a href="#"><?=$category['title'];?> <?=$arrow?></a> </li>
+    <li class="<?=$child?>"><a href="category/<?=$category['alias'];?>"><?=$category['title'];?> <?=$arrow?></a> </li>
 <?php endif; ?>
 
