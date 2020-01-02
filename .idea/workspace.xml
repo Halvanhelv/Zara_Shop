@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ishop/core/libs/Pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ishop/core/libs/Pagination.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../govno" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -82,7 +81,8 @@
       <workItem from="1577443450473" duration="45174000" />
       <workItem from="1577634599305" duration="17941000" />
       <workItem from="1577721289139" duration="7706000" />
-      <workItem from="1577740479013" duration="9544000" />
+      <workItem from="1577740479013" duration="10240000" />
+      <workItem from="1577929478911" duration="3833000" />
     </task>
     <servers />
   </component>
