@@ -29,16 +29,18 @@ class Pagination{
         $page1right = null; // первая страница справа
 
         if( $this->currentPage > 1 ){
-            $back = "<li><a class='' href='{$this->uri}page=" .($this->currentPage - 1). "'>&lt;</a></li>";
+            $back = "<li><a class='' href='{$this->uri}page=" .($this->currentPage - 1). "'><i class=\"ion-chevron-left\"></i></a></li>";
         }
         if( $this->currentPage < $this->countPages ){
-            $forward = "<li><a class='' href='{$this->uri}page=" .($this->currentPage + 1). "'>&gt;</a></li>";
+            $forward = "<li><a class='' href='{$this->uri}page=" .($this->currentPage + 1). "'><i class=\"ion-chevron-right\"></i></a></li>";
         }
         if( $this->currentPage > 3 ){
-            $startpage = "<li><a class='' href='{$this->uri}page=1'>&laquo;</a></li>";
+            $startpage = "<li><a class='' href='{$this->uri}page=1'><i class=\"ion-chevron-left\"></i>
+<i class=\"ion-chevron-left\"></i></a></li>";
         }
         if( $this->currentPage < ($this->countPages - 2) ){
-            $endpage = "<li><a class='' href='{$this->uri}page={$this->countPages}'>&raquo;</a></li>";
+            $endpage = "<li><a class='' href='{$this->uri}page={$this->countPages}'><i class=\"ion-chevron-right\"></i>
+<i class=\"ion-chevron-right\"></i></a></li>";
         }
         if( $this->currentPage - 2 > 0 ){
             $page2left = "<li><a class='' href='{$this->uri}page=" .($this->currentPage-2). "'>" .($this->currentPage - 2). "</a></li>";
@@ -53,7 +55,7 @@ class Pagination{
             $page2right = "<li><a class='' href='{$this->uri}page=" .($this->currentPage + 2). "'>" .($this->currentPage + 2). "</a></li>";
         }
 
-        return '<ul class="pagination">' . $startpage.$back.$page2left.$page1left.'<li class="current"><a>'.$this->currentPage.'</a></li>'.$page1right.$page2right.$forward.$endpage . '</ul>';
+        return '<ul class="">' . $startpage.$back.$page2left.$page1left.'<li ><a class="active">'.$this->currentPage.'</a></li>'.$page1right.$page2right.$forward.$endpage . '</ul>';
     }
 
     public function __toString(){

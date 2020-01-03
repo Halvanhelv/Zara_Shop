@@ -1,141 +1,103 @@
-<div id="grid-view" class="products-grid fade tab-pane in active">
-
-    <div class="product-grid-holder">
-        <div class="row no-margin">
-            <?php if(!empty($products)): ?>
-                <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
-                <?php foreach($products as $product): ?>
-                    <div class="col-xs-12 col-sm-4 no-margin product-item-holder hover">
-                        <div class="product-item">
-                            <div class="ribbon red"><span>Популярно</span></div>
-                            <div class="image">
-                                <a href="product/<?=$product->alias;?>">  <img alt="" src="images/<?=$product->img;?>" style="max-width: 186px; max-height: 246px" data-echo="images/<?=$product->img;?>" /></a>
-                            </div>
-                            <div class="body">
-                                <div class="label-discount green">-50% sale</div>
-                                <div class="title">
-                                    <a href="product/<?=$product->alias;?>"><?=$product->title;?></a>
-                                </div>
-                                <div class="brand">sony</div>
-                            </div>
-                            <div class="prices">
-
-                                <?php if($product->old_price): ?>
-                                    <div class="price-prev"><?=$curr['symbol_left'];?><?=$product->old_price * $curr['value'];?><?=$curr['symbol_right'];?></div>
-                                <?php else:?>
-                                    <div class="price-prev"></div>
-                                <?php endif; ?>
-
-                                <div class="price-current pull-right"><?=$curr['symbol_left'];?><?=$product->price * $curr['value']?><?=$curr['symbol_right'];?></div>
-                            </div>
-                            <div class="hover-area">
-                                <div class="add-cart-button">
-                                    <a href="cart/add?id=<?=$product->id;?>"  data-id="<?=$product->id;?>" class="le-button add-to-cart-link">Купить</a>
-                                </div>
-                                <div class="wish-compare">
-                                    <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                                    <a class="btn-add-to-compare" href="#">compare</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php endforeach; ?>
-            <?php else: ?>
-                <h3>В этой категории товаров пока нет...</h3>
-            <?php endif; ?>
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
+<div class="breadcrumb-area mt-37 hm-4-padding">
+    <div class="container-fluid">
+        <div class="breadcrumb-content text-center border-top-2">
+            <h2>Shop Grid 6 Column</h2>
+            <ul>
+                <?=$breadcrumbs;?>
+            </ul>
         </div>
-    </div><!-- /.product-grid-holder -->
+    </div>
+</div>
+<div class="banner-area hm-4-padding">
+    <div class="container-fluid">
+        <div class="banner-img">
+            <a href="#"><img src="assets/img/banner/16.jpg" alt=""></a>
+        </div>
+    </div>
+</div>
+<div class="shop-wrapper hm-4-padding pt-120 pb-100">
+    <div class="container-fluid">
+        <?php new \app\widgets\filter\Filter(); ?>
+        <div class="grid-list-product-wrapper">
+            <div class="product-grid product-view">
+                <div class="row">
+                    <?php if(!empty($products)): ?>
+                        <?php foreach($products as $product): ?>
+                            <div class="product-width col-md-6 col-lg-4 col-xl-2">
+                                <div class="product-wrapper mb-35">
+                                    <div class="product-img">
+                                        <a href="product/<?=$product->alias;?>">
+                                            <img src="images/background/310on375/<?=$product->img;?>" alt="">
+                                        </a>
+                                        <div class="price-decrease">
+                                            <span>30% off</span>
+                                        </div>
+                                        <div class="product-action-3">
+                                            <a class="action-plus" title="Quick View" data-toggle="modal" data-src="<?=$product->alias;?>" data-target="#exampleModal" href="#">
+                                                <i class="ti-plus"></i> Посмотреть
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-title-wishlist">
+                                            <div class="product-title-3">
+                                                <h4><a href="product/<?=$product->alias;?>"><?=$product->title;?></a></h4>
+                                            </div>
+                                            <div class="product-wishlist-3">
+                                                <a href="#"><i class="ti-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-peice-addtocart">
+                                            <div class="product-peice-3">
+                                                <?php if($product->old_price): ?>
+                                                    <span class="old"><?=$curr['symbol_left'];?><?=number_format($product->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                                                <?php endif; ?>
+                                                <span><?=$curr['symbol_left'];?><?=number_format($product->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
 
-    <div class="pagination-holder">
-        <div class="row">
+                                            </div>
+                                            <div class="product-addtocart">
+                                                <a href="cart/add?id=<?=$product->id;?>" class="add-to-cart-link" data-id="<?=$product->id;?>"> <i class="ti-shopping-cart"></i>В корзину</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-list-details">
+                                        <h2><a href="product/<?=$product->alias;?>"><?=$product->title;?></a></h2>
+                                        <div class="product-rating">
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                            <i class="ion-ios-star"></i>
+                                        </div>
+                                        <div class="product-price">
+                                            <?php if($product->old_price): ?>
+                                                <span class="old"><?=$curr['symbol_left'];?><?=number_format($product->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                                            <?php endif; ?>
+                                            <span><?=$curr['symbol_left'];?><?=number_format($product->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
 
-            <div class="col-xs-12 col-sm-6 text-left">
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
+                                        <div class="shop-list-cart">
+                                            <a href="cart.html"><i class="ti-shopping-cart"></i> В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <h3>В этой категории товаров пока нет...</h3>
+                    <?php endif; ?>
+                </div>
+                <div class="pagination-style text-center mt-30">
+                    <ul>
 
-                <?php if($pagination->countPages > 1): ?>
-                    <?=$pagination;?>
-                <?php endif; ?>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6">
-                <div class="result-counter">
-                    Показано <span>(<?=count($products)?> товара(ов)</span> из  <span><?=$total;?>)</span>
+                        <?php if($pagination->countPages > 1): ?>
+                            <?=$pagination;?>
+                        <?php endif; ?>
+                    </ul>
                 </div>
             </div>
-
-        </div><!-- /.row -->
+        </div>
     </div>
-</div><!-- /.products-grid #grid-view -->
-<div id="list-view" class="products-grid fade tab-pane ">
-    <div class="products-list">
-        <?php if(!empty($products)): ?>
-            <?php foreach($products as $product): ?>
-                <div class="product-item product-item-holder">
-                    <div class="ribbon red"><span>sale</span></div>
-                    <div class="ribbon blue"><span>new!</span></div>
-                    <div class="row">
-                        <div class="no-margin col-xs-12 col-sm-4 image-holder">
-                            <div class="image">
-                                <a href="product/<?=$product->alias;?>">  <img alt="" src="images/<?=$product->img;?>" data-echo="images/<?=$product->img;?>" /></a>
-
-                            </div>
-                        </div>
-                        <div class="no-margin col-xs-12 col-sm-5 body-holder">
-                            <div class="body">
-                                <div class="label-discount green">-50% sale</div>
-                                <div class="title">
-                                    <a href="product/<?=$product->alias;?>"><?=$product->title;?>   </a>
-                                </div>
-                                <div class="brand">sony</div>
-                                <div class="excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis euismod erat sit amet porta. Etiam venenatis ac diam ac tristique. Morbi accumsan consectetur odio ut tincidunt.</p>
-                                </div>
-                                <div class="addto-compare">
-                                    <a class="btn-add-to-compare" href="#">add to compare list</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="no-margin col-xs-12 col-sm-3 price-area">
-                            <div class="right-clmn">
-                                <div class="price-current"><?=$curr['symbol_left'];?><?=$product->price * $curr['value'];?><?=$curr['symbol_right'];?></div>
-                                <?php if($product->old_price): ?>
-                                    <div class="price-prev"><?=$curr['symbol_left'];?><?=$product->old_price * $curr['value'];?><?=$curr['symbol_right'];?></div>
-                                <?php endif; ?>
-                                <div class="availability"><label>availability:</label><span class="available">  in stock</span></div>
-                                <a class="le-button add-to-cart-link" data-id="<?=$product->id;?>" href="cart/add?id=<?=$product->id;?>">В корзину</a>
-                                <a class="btn-add-to-wishlist" href="#">add to wishlist</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <h3>В этой категории товаров пока нет...</h3>
-        <?php endif; ?>
-
-
-
-    </div>
-
-    <div class="pagination-holder">
-        <div class="row">
-
-            <div class="col-xs-12 col-sm-6 text-left">
-
-                <?php if($pagination->countPages > 1): ?>
-                    <?=$pagination;?>
-                <?php endif; ?>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6">
-                <div class="result-counter">
-                    Показано <span>(<?=count($products)?> товара(ов)</span> из  <span><?=$total;?>)</span>
-                </div>
-            </div>
-
-        </div><!-- /.row -->
-    </div>
-
 </div>

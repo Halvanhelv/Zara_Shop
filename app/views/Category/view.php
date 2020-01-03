@@ -1,3 +1,4 @@
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <div class="breadcrumb-area mt-37 hm-4-padding">
     <div class="container-fluid">
         <div class="breadcrumb-content text-center border-top-2">
@@ -21,25 +22,27 @@
         <div class="grid-list-product-wrapper">
             <div class="product-grid product-view">
                 <div class="row">
+                    <?php if(!empty($products)): ?>
+                    <?php foreach($products as $product): ?>
                     <div class="product-width col-md-6 col-lg-4 col-xl-2">
                         <div class="product-wrapper mb-35">
                             <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/21.jpg" alt="">
+                                <a href="product/<?=$product->alias;?>">
+                                    <img src="images/background/310on375/<?=$product->img;?>" alt="">
                                 </a>
                                 <div class="price-decrease">
                                     <span>30% off</span>
                                 </div>
                                 <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
+                                    <a class="action-plus" title="Quick View" data-toggle="modal" data-src="<?=$product->alias;?>" data-target="#exampleModal" href="#">
+                                        <i class="ti-plus"></i> Посмотреть
                                     </a>
                                 </div>
                             </div>
                             <div class="product-content">
                                 <div class="product-title-wishlist">
                                     <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
+                                        <h4><a href="product/<?=$product->alias;?>"><?=$product->title;?></a></h4>
                                     </div>
                                     <div class="product-wishlist-3">
                                         <a href="#"><i class="ti-heart"></i></a>
@@ -47,16 +50,19 @@
                                 </div>
                                 <div class="product-peice-addtocart">
                                     <div class="product-peice-3">
-                                        <span class="old">$200.00 </span>
-                                        <span>$120.00</span>
+                                        <?php if($product->old_price): ?>
+                                        <span class="old"><?=$curr['symbol_left'];?><?=number_format($product->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                                       <?php endif; ?>
+                                        <span><?=$curr['symbol_left'];?><?=number_format($product->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+
                                     </div>
                                     <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
+                                        <a href="cart/add?id=<?=$product->id;?>" class="add-to-cart-link" data-id="<?=$product->id;?>"> <i class="ti-shopping-cart"></i>В корзину</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-list-details">
-                                <h2><a href="product-details.html">Awesome Cloth Jewelry</a></h2>
+                                <h2><a href="product/<?=$product->alias;?>"><?=$product->title;?></a></h2>
                                 <div class="product-rating">
                                     <i class="ion-ios-star"></i>
                                     <i class="ion-ios-star"></i>
@@ -65,604 +71,30 @@
                                     <i class="ion-ios-star"></i>
                                 </div>
                                 <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
+                                    <?php if($product->old_price): ?>
+                                    <span class="old"><?=$curr['symbol_left'];?><?=number_format($product->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                                    <?php endif; ?>
+                                    <span><?=$curr['symbol_left'];?><?=number_format($product->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
                                 <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                    <a href="cart.html"><i class="ti-shopping-cart"></i> В корзину</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/22.jpg" alt="">
-                                </a>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span>$150.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Awesome Cloth Jewelry</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/23.jpg" alt="">
-                                </a>
-                                <div class="price-decrease">
-                                    <span>50% off</span>
-                                </div>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Bracelet </a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span class="old">$200.00 </span>
-                                        <span>$120.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Nice Cloth Bracelet </a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/24.jpg" alt="">
-                                </a>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span>$200.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Cloth Hairpin</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/25.jpg" alt="">
-                                </a>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span class="old">$200.00 </span>
-                                        <span>$120.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Awesome Cloth Jewelry</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/26.jpg" alt="">
-                                </a>
-                                <div class="price-decrease">
-                                    <span>20% off</span>
-                                </div>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Bracelet</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span>$100.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Cloth Bracelet</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/27.jpg" alt="">
-                                </a>
-                                <div class="price-decrease">
-                                    <span>30% off</span>
-                                </div>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span class="old">$200.00 </span>
-                                        <span>$120.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Awesome Cloth Jewelry</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/28.jpg" alt="">
-                                </a>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span>$150.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Awesome Cloth Jewelry</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/21.jpg" alt="">
-                                </a>
-                                <div class="price-decrease">
-                                    <span>50% off</span>
-                                </div>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Bracelet </a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span class="old">$200.00 </span>
-                                        <span>$120.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Nice Cloth Bracelet </a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/23.jpg" alt="">
-                                </a>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span>$200.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Cloth Hairpin</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/22.jpg" alt="">
-                                </a>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Jewelry</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span class="old">$200.00 </span>
-                                        <span>$120.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Awesome Cloth Jewelry</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-width col-md-6 col-lg-4 col-xl-2">
-                        <div class="product-wrapper mb-35">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/img/product/24.jpg" alt="">
-                                </a>
-                                <div class="price-decrease">
-                                    <span>20% off</span>
-                                </div>
-                                <div class="product-action-3">
-                                    <a class="action-plus-2" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
-                                        <i class="ti-plus"></i> Quict View
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-title-wishlist">
-                                    <div class="product-title-3">
-                                        <h4><a href="product-details.html">Cloth Bracelet</a></h4>
-                                    </div>
-                                    <div class="product-wishlist-3">
-                                        <a href="#"><i class="ti-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-peice-addtocart">
-                                    <div class="product-peice-3">
-                                        <span>$100.00</span>
-                                    </div>
-                                    <div class="product-addtocart">
-                                        <a href="#"> <i class="ti-shopping-cart"></i> Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-list-details">
-                                <h2><a href="product-details.html">Cloth Bracelet</a></h2>
-                                <div class="product-rating">
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                    <i class="ion-ios-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="old">$22.00 </span>
-                                    <span>$19.00</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-                                <div class="shop-list-cart">
-                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <?php endforeach; ?>
+                    <?php else: ?>
+                        <h3>В этой категории товаров пока нет...</h3>
+                    <?php endif; ?>
                 </div>
                 <div class="pagination-style text-center mt-30">
-                    <ul>
-                        <li>
-                            <a class="active" href="#">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="ion-chevron-right"></i>
-                            </a>
-                        </li>
-                    </ul>
+
+                        <?php if($pagination->countPages > 1): ?>
+                            <?=$pagination;?>
+                        <?php endif; ?>
+
                 </div>
             </div>
         </div>
