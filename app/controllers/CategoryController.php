@@ -38,11 +38,12 @@ class   CategoryController extends AppController {
             SELECT product_id FROM attribute_product WHERE attr_id IN (1,5) GROUP BY product_id HAVING COUNT(product_id) = 2
             )
             */
-            $price = Filter::getPrice();
+
 
             if($price){
                 $sql_part1 = "AND  price >= $price[0] AND price <= $price[1]";
             }
+
         }
 
 
@@ -55,18 +56,26 @@ class   CategoryController extends AppController {
             )
             */
             $filter = Filter::getFilter();
+            $price = Filter::getPrice();
+
             if($filter){
                 $cnt = Filter::getCountGroups($filter);
                 $sql_part = "AND id IN (SELECT product_id FROM attribute_product WHERE attr_id IN ($filter)  GROUP BY product_id HAVING COUNT(product_id) = $cnt)";
             }
+
+
         }
+        $sort = Filter::getSort();
+        if ($sort) {
+            $sql_part.= " ORDER BY price";}
 
 
         $total = \R::count('product', "WHERE status = 'on' AND category_id IN ($ids) $sql_part");
         $pagination = new Pagination($page, $perpage, $total);
         $start = $pagination->getStart();
 
-        $products = \R::find('product', " WHERE status = 'on' AND category_id IN ($ids) $sql_part1 $sql_part  LIMIT $start, $perpage");
+        $products = \R::find('product', " WHERE status = 'on' AND category_id IN ($ids)  $sql_part  LIMIT $start, $perpage");
+
 
         if($this->isAjax()){
             $this->loadView('filter', compact('products', 'total', 'pagination'));

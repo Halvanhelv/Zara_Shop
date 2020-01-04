@@ -101,6 +101,22 @@ class Filter  {
         }
         return $price;
     }
+    public static function getSort(){
+
+        $sort = null;
+        if(!empty($_GET['sort'])){
+            $sort = $_GET['sort'];
+//            if ($sort != 'lowto' || $sort != 'hightto'|| $sort != 'hightto'|| $sort != 'new' || $sort != 'popular' || $sort != 'default' )
+//            {
+//                debug($sort);
+//                $sort = null;
+//
+//            }
+
+        }
+        return $sort;
+    }
+
     public static function getCountGroups($filter){
         $filters = explode(',', $filter);
         $cache = Cache::instance();

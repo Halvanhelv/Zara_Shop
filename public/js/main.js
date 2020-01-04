@@ -31,6 +31,34 @@ function ShowQuick(res)
     $('.modal-content').html(res);
 }
 
+$(document).on('click', '.sort-by a', function (e) {
+    e.preventDefault();
+    let sort = $(this).attr('id');
+    if (sort)
+    {
+        $.ajax(
+            {
+                url: location.href,
+                data: {
+                    sort: sort,
+                },
+                type: 'GET',
+
+                success: function(sort) {
+
+                    $('.preloader').delay(500).fadeOut('slow', function() {
+                        $('.grid-list-product-wrapper').html(sort).fadeIn();
+
+                    });
+                },
+
+            }
+
+        )
+
+    }
+});
+
 /* Filters */
 $('body').on('change', '.w_sidebar input', function() {
     let originalVal = $('.price-slider').data('slider').getValue().join(",")

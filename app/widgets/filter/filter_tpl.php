@@ -24,7 +24,7 @@
                         <li><a href="#">Popularity</a></li>
                         <li><a href="#">Average rating</a></li>
                         <li><a href="#">Newness</a></li>
-                        <li><a href="#">Price: Low to High</a></li>
+                        <li><a href="#" id="lowto">Price: Low to High</a></li>
                         <li><a href="#">Price: High to Low</a></li>
                     </ul>
                 </div>
