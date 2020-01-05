@@ -20,12 +20,12 @@
                 <div class="product-filter col-md-3 col-sm-6 col-xs-12 mb-30">
                     <h5>Sort by</h5>
                     <ul class="sort-by">
-                        <li><a href="#">Default</a></li>
-                        <li><a href="#">Popularity</a></li>
-                        <li><a href="#">Average rating</a></li>
-                        <li><a href="#">Newness</a></li>
-                        <li><a href="#" id="lowto">Price: Low to High</a></li>
-                        <li><a href="#">Price: High to Low</a></li>
+                        <li><a href="#" id="default">По умолчанию</a></li>
+                        <li><a href="#" id="popular">Популярность</a></li>
+<!--                        <li><a href="#">Average rating</a></li>-->
+                        <li><a href="#" id="new">Новинки</a></li>
+                        <li><a href="#" id="lowto">Цена: от - к +</a></li>
+                        <li><a href="#" id="hightto">Цена: от + к - </a></li>
                     </ul>
                 </div>
                 <div class="product-filter col-md-3 col-sm-6 col-xs-12 mb-30">

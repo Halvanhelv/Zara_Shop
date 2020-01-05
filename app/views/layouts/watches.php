@@ -253,7 +253,7 @@
 
 </div>
 
-<div class="preloader" style="display: none;margin: 0 auto"><img src="images/ring.svg" alt="" ></div>
+<div class="preloader1" style="display: none;margin: 0 auto"><img src="images/ring.svg" alt="" ></div>
 
 <!-- all js here -->
 <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>

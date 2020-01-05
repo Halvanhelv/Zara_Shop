@@ -67,7 +67,7 @@ class   CategoryController extends AppController {
         }
         $sort = Filter::getSort();
         if ($sort) {
-            $sql_part.= " ORDER BY price";}
+            $sql_part.= $sort;}
 
 
         $total = \R::count('product', "WHERE status = 'on' AND category_id IN ($ids) $sql_part");

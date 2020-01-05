@@ -43,11 +43,16 @@ $(document).on('click', '.sort-by a', function (e) {
                     sort: sort,
                 },
                 type: 'GET',
+                beforeSend: function() {
+                    $('.preloader1').fadeIn(300, function() {
+                        $('.product-grid').css("opacity",0);
+                    });
+                },
 
                 success: function(sort) {
 
-                    $('.preloader').delay(500).fadeOut('slow', function() {
-                        $('.grid-list-product-wrapper').html(sort).fadeIn();
+                    $('.preloader1').delay(500).fadeOut('slow', function() {
+                        $('.grid-list-product-wrapper .product-view').html(sort).fadeIn();
 
                     });
                 },

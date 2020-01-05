@@ -1,5 +1,5 @@
 <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
-<div class="product-grid product-view">
+
     <div class="row">
         <?php if(!empty($products)): ?>
             <?php foreach($products as $product): ?>
@@ -76,4 +76,3 @@
             <?php endif; ?>
         </ul>
     </div>
-</div>

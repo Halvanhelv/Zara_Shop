@@ -106,12 +106,27 @@ class Filter  {
         $sort = null;
         if(!empty($_GET['sort'])){
             $sort = $_GET['sort'];
-//            if ($sort != 'lowto' || $sort != 'hightto'|| $sort != 'hightto'|| $sort != 'new' || $sort != 'popular' || $sort != 'default' )
-//            {
-//                debug($sort);
-//                $sort = null;
-//
-//            }
+
+           if ($sort == 'lowto')
+           {
+
+                $sort = "ORDER BY price";
+           }
+           elseif ($sort == 'hightto')
+           {
+               $sort = "ORDER BY price DESC";
+           }
+           elseif ($sort == 'new')
+           {
+               $sort = 'ORDER BY hit DESC';
+           }
+            elseif ($sort == 'popular')
+            {
+                $sort = 'ORDER BY best_seller DESC';
+            }
+            else
+                ($sort = '');
+
 
         }
         return $sort;
