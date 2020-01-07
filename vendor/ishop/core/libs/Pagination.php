@@ -55,7 +55,7 @@ class Pagination{
             $page2right = "<li><a class='' href='{$this->uri}page=" .($this->currentPage + 2). "'>" .($this->currentPage + 2). "</a></li>";
         }
 
-        return '<ul class="">' . $startpage.$back.$page2left.$page1left.'<li ><a class="active">'.$this->currentPage.'</a></li>'.$page1right.$page2right.$forward.$endpage . '</ul>';
+        return '<ul class="">' . $startpage.$back.$page2left.$page1left.'<li ><a  class="active">'.$this->currentPage.'</a></li>'.$page1right.$page2right.$forward.$endpage . '</ul>';
     }
 
     public function __toString(){

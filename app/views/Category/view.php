@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <?php new \app\widgets\filter\Filter(); ?>
         <div class="grid-list-product-wrapper">
-            <div class="product-grid product-view">
+            <div class="product-view <?php if(isset($_GET['mode'])):?> <?= $_GET['mode'] ?> <?php else: ?> <?= 'product-grid' ?> <?php endif; ?>">
                 <div class="row">
                     <?php if(!empty($products)): ?>
                     <?php foreach($products as $product): ?>

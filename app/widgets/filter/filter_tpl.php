@@ -3,8 +3,8 @@
         <div class="shop-topbar-wrapper">
             <div class="grid-list-options">
                 <ul class="view-mode">
-                    <li class="active"><a href="#product-grid" onclick="return false"  data-view="product-grid"><i class="ion-grid"></i></a></li>
-                    <li><a href="#product-list" onclick="return false" data-view="product-list"><i class="ion-navicon"></i></a></li>
+                    <li class="<?php if (!isset($_GET['mode']) || ($_GET['mode'] != 'product-list')): ?><?= 'active' ?> <?php endif ?>"><a href="#product-grid"   data-view="product-grid"><i class="ion-grid"></i></a></li>
+                    <li <?php if (isset($_GET['mode']) && ($_GET['mode'] == 'product-list')): ?><?= 'class= "active"' ?> <?php endif ?>><a href="#product-list"   data-view="product-list"><i class="ion-navicon"></i></a></li>
                 </ul>
             </div>
             <div class="shop-filter">
