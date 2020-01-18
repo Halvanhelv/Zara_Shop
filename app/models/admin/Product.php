@@ -212,6 +212,10 @@ if(!empty($data['detail'])) {
             }
 
             elseif($name == 'multi') {
+                if (!isset($_SESSION['multi']))
+                {
+                    $_SESSION['multi'][] = '';
+                }
                     if (!in_array($new_name,$_SESSION['multi'])) {
                         $_SESSION['multi'][] = $new_name;
                     }

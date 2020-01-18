@@ -9,12 +9,12 @@ $('body').on('click', '.action-plus', function() {
         type: 'GET',
         beforeSend: function() {
 
-                $('.modal-body').fadeOut();
+            $('.modal-body').fadeOut();
             $('.preloader').fadeIn();
 
         },
         success: function(res) {
-           ShowQuick(res);
+            ShowQuick(res);
 
 
         },
@@ -34,8 +34,8 @@ function ShowQuick(res)
 
 $(document).on('click', '.view-mode a', function (e) {
     e.preventDefault();
-
- let view_mode =  $(this).data('view');
+console.log(3);
+    let view_mode =  $(this).data('view');
 
     var url = location.search.replace(/mode(.+?)(&|$)/g, ''); //$2
 
@@ -44,7 +44,7 @@ $(document).on('click', '.view-mode a', function (e) {
 
     newURL = newURL.replace('&&', '&');
     newURL = newURL.replace('?&', '?');
-console.log(newURL);
+    console.log(newURL);
     let href =  $('.pagination-style a');
     let page_url = newURL; //$2
     let wef = page_url.replace(/page(.+?)(&|$)/g, '');
@@ -54,7 +54,7 @@ console.log(newURL);
             console.log(wef);
             let fin = $(this).attr('href').match(/page(.+?)(&|$)/g, '');
             let qwe = wef + "&" + fin;
-           $(this).attr('href',qwe);
+            $(this).attr('href',qwe);
         }
     });
 
@@ -82,12 +82,18 @@ $(document).on('click', '.sort-by a', function (e) {
                     });
                 },
 
-                success: function(sort) {
+                success: function(done) {
 
                     $('.preloader1').delay(500).fadeOut('slow', function() {
                         $('.product-grid').css("opacity",1);
-                        $('.grid-list-product-wrapper .product-view').html(sort).fadeIn();
+                        $('.grid-list-product-wrapper .product-view').html(done).fadeIn();
+                        var url = location.search.replace(/sort(.+?)(&|$)/g, ''); //$2
+                        var newURL = location.pathname + url  + (location.search ? "&" : "?") + "sort=" + sort;
 
+                        newURL = newURL.replace('&&', '&');
+                        newURL = newURL.replace('?&', '?');
+
+                        history.pushState({}, '', newURL);
                     });
                 },
 
@@ -130,7 +136,7 @@ $('body').on('change', '.w_sidebar input', function() {
                     $('.product-one').html(res).fadeIn();
                     var url = location.search.replace(/filter(.+?)(&|$)price(.+?)(&|$)/g, ''); //$2
                     console.log(url);
- //одно регулярное выражение для двоих знначений
+                    //одно регулярное выражение для двоих знначений
 
                     var newURL = location.pathname + url  + (location.search ? "&" : "?") + "filter=" + data + "&"   + "price=" + originalVal;
 
@@ -153,10 +159,10 @@ $('body').on('change', '.w_sidebar input', function() {
 /*Cart*/
 $('body').on('click', '.add-to-cart-link', function(e) {
     e.preventDefault();
-        var id = $(this).data('id'),
+    var id = $(this).data('id'),
         qty = $('.quickview-plus-minus input').val() ? $('.quickview-plus-minus input').val() : 1,
         mod = $('.available select').val();
-        console.log(qty);
+    console.log(qty);
     $.ajax({
         url: '/cart/add',
         data: {
