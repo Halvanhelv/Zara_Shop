@@ -103,7 +103,19 @@ $(document).on('click', '.sort-by a', function (e) {
 
     }
 });
+function show(price,min,max) {
+    $('.preloader1').delay(500).fadeOut('slow', function() {
+        $('.product-grid').css("opacity",1);
+        $('.grid-list-product-wrapper .product-view').html(price).fadeIn();
+        var url = location.search.replace(/price(.+?)(&|$)/g, ''); //$2
+        var newURL = location.pathname + url  + (location.search ? "&" : "?") + "price=" + min + ',' + max;
 
+        newURL = newURL.replace('&&', '&');
+        newURL = newURL.replace('?&', '?');
+
+        history.pushState({}, '', newURL);
+    });
+}
 /* Filters */
 $('body').on('change', '.w_sidebar input', function() {
     let originalVal = $('.price-slider').data('slider').getValue().join(",");

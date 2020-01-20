@@ -96,6 +96,8 @@ class Filter  {
 
         $price = null;
         if(!empty($_GET['price'])){
+
+
             $price = preg_replace("#[^\d,]+#", '', $_GET['price']);
             $price = explode(",",$price);
         }

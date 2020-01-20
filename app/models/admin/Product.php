@@ -38,30 +38,30 @@ class Product extends AppModel {
         $detail = \R::getAssoc("SELECT  attribute_id, attr_value FROM product_detail JOIN detail ON product_detail.attribute_id = detail.id WHERE product_detail.product_id = ?", [$id]);
 
         $tmp = [];
-if(!empty($data['detail'])) {
-    foreach ($data['detail'] as $key => $value) {
-        foreach ($data['detail_attrs'] as $k => $v) {
+        if(!empty($data['detail'])) {
+            foreach ($data['detail'] as $key => $value) {
+                foreach ($data['detail_attrs'] as $k => $v) {
 
-            if ($key == $k) {
-                $tmp[$value] = $v;
+                    if ($key == $k) {
+                        $tmp[$value] = $v;
+                    }
+                }
+
+            }
+            $sql_part = '';
+            foreach ($tmp as $v => $k) {
+                $v = (int)$v;
+                $k = (string)$k;
+                $sql_part .= "($id, $v,'$k'),";
+            }
+
+            $sql_part = rtrim($sql_part, ',');
+            // если добавляется характеристика товара
+            if (empty($detail) && !empty($data['detail'])) {
+                \R::exec("INSERT INTO product_detail (product_id, attribute_id,attr_value) VALUES $sql_part");
+                return;
             }
         }
-
-    }
-    $sql_part = '';
-    foreach ($tmp as $v => $k) {
-        $v = (int)$v;
-        $k = (string)$k;
-        $sql_part .= "($id, $v,'$k'),";
-    }
-
-    $sql_part = rtrim($sql_part, ',');
-    // если добавляется характеристика товара
-    if (empty($detail) && !empty($data['detail'])) {
-        \R::exec("INSERT INTO product_detail (product_id, attribute_id,attr_value) VALUES $sql_part");
-        return;
-    }
-}
 
 
         // если менеджер убрал характеристику товара
@@ -216,24 +216,30 @@ if(!empty($data['detail'])) {
                 {
                     $_SESSION['multi'][] = '';
                 }
+<<<<<<< HEAD
+                if (!in_array($new_name,$_SESSION['multi'])) {
+                    $_SESSION['multi'][] = $new_name;
+=======
                     if (!in_array($new_name,$_SESSION['multi'])) {
                         $_SESSION['multi'][] = $new_name;
                     }
+>>>>>>> origin/master
                 }
+            }
             elseif($name == 'slider'){
 
                 $_SESSION['slider'] = $new_name;
             }
 
-            }
-
-
-            self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
-            self::overlay($uploadfile,$uploadfile, $defaultbackground, $ext);
-
-
-
         }
+
+
+        self::resize($uploadfile, $uploadfile, $wmax, $hmax, $ext);
+        self::overlay($uploadfile,$uploadfile, $defaultbackground, $ext);
+
+
+
+    }
 
 
 
@@ -297,15 +303,15 @@ if(!empty($data['detail'])) {
     public static function overlay($target,$dest, $background, $ext)
     {
 
-$finish = $target;
+        $finish = $target;
         $stamp = imagecreatefrompng($background);
         $marge_right = 100;
         $marge_bottom = 100;
         $main = "";
         switch($ext){
             case("gif"):
-            $main = imagecreatefromgif($finish);
-            break;
+                $main = imagecreatefromgif($finish);
+                break;
             case("webp"):
                 $main = imagecreatefromwebp($finish);
                 break;

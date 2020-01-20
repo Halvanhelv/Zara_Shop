@@ -58,8 +58,9 @@
                     <h5>Filter by price</h5>
                     <div id="price-range"></div>
                     <div class="price-values">
-                        <span>Price:</span>
-                        <input type="text" class="price-amount">
+                        <span></span>
+                        <input type="text" class="price-amount"  style="font-size: 12px">
+
                     </div>
                 </div>
             </div>

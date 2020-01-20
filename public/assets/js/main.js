@@ -291,8 +291,8 @@
         });
     }
     buttonEffect();
-    
-    
+
+
     /* creative-menu-6 */
     var CreativeMenu = $('.sidebarmenu-wrapper');
     $(".menu-icon").on("click", function() {
@@ -333,19 +333,11 @@
         $('.view-mode li').removeClass('active');
         $(this).parent('li').addClass('active');
         $('.product-view').removeClass('product-grid product-list').addClass($proStyle);
-    })
-    
-    
-    /*-- Price Range --*/
-    $('#price-range').slider({
-        range: true,
-        min: 0,
-        max: 700,
-        values: [70, 500],
-        slide: function(event, ui) {
-            $('.price-amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
-        }
     });
+
+
+    /*-- Price Range --*/
+
     $('.price-amount').val('$' + $('#price-range').slider('values', 0) +
         ' - $' + $('#price-range').slider('values', 1));
     $('.product-filter-toggle').on('click', function() {

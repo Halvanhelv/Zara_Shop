@@ -27,6 +27,7 @@
                                     <a href="#"><i class="ti-heart"></i></a>
                                 </div>
                             </div>
+
                             <div class="product-peice-addtocart">
                                 <div class="product-peice-3">
                                     <?php if($product->old_price): ?>
@@ -63,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+
             <?php endforeach; ?>
         <?php else: ?>
             <h3>В этой категории товаров пока нет...</h3>

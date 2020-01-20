@@ -287,6 +287,54 @@
         });
     } );
 </script>
+<script>
+    var min = <?=$min ?>,
+        max = <?=$max ?>;
+</script>
+<script>
+
+    $('#price-range').slider({
+        range: true,
+        min: 0,
+        max: max,
+        values: [0,max],
+        slide: function(event, ui) {
+            $('.price-amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
+        },
+        stop: function( event, ui ) {
+let price = ui.values[0] + ',' +ui.values[1];
+
+            $.ajax({
+
+                url: location.href,
+                 data: {
+                    price: price
+                },
+                type: 'GET',
+                beforeSend: function() {
+
+                    $('.preloader1').fadeIn();
+
+                },
+                success: function(price) {
+
+                    show(price,ui.values[0],ui.values[1]);
+
+
+                },
+                error: function() {
+                    alert('Ошибка!');
+                }
+            })
+        }
+
+    });
+    $('.price-amount').val('$' + $('#price-range').slider('values', 0) +
+        ' - $' + $('#price-range').slider('values', 1));
+    $('.product-filter-toggle').on('click', function() {
+        $('.product-filter-wrapper').slideToggle();
+    })
+</script>
 </body>
 <?php
 $logs = \R::getDatabaseAdapter()

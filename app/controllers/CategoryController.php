@@ -29,7 +29,7 @@ class   CategoryController extends AppController {
         $perpage = App::$app->getProperty('pagination');
 
         $sql_part = '';
-        $sql_part1 = '';
+
 
         if(!empty($_GET['price'])){
             /*
@@ -38,11 +38,12 @@ class   CategoryController extends AppController {
             SELECT product_id FROM attribute_product WHERE attr_id IN (1,5) GROUP BY product_id HAVING COUNT(product_id) = 2
             )
             */
-
+            $price = Filter::getPrice();
 
             if($price){
-                $sql_part1 = "AND  price >= $price[0] AND price <= $price[1]";
+                $sql_part .= "AND  price >= $price[0] AND price <= $price[1] ";
             }
+
 
         }
 
@@ -56,7 +57,7 @@ class   CategoryController extends AppController {
             )
             */
             $filter = Filter::getFilter();
-            $price = Filter::getPrice();
+
 
             if($filter){
                 $cnt = Filter::getCountGroups($filter);
@@ -75,14 +76,17 @@ class   CategoryController extends AppController {
         $start = $pagination->getStart();
 
         $products = \R::find('product', " WHERE status = 'on' AND category_id IN ($ids)  $sql_part  LIMIT $start, $perpage");
-
+         $min = \R::getAssoc("SELECT MIN(price) FROM product ");
+          $min = implode('',$min);
+        $max = \R::getAssoc("SELECT MAX(price) FROM product ");
+        $max = implode('',$max);
 
         if($this->isAjax()){
             $this->loadView('filter', compact('products', 'total', 'pagination'));
         }
 
         $this->setMeta($category->title, $category->description, $category->keywords);
-        $this->set(compact('products', 'breadcrumbs', 'pagination', 'total'));
+        $this->set(compact('products', 'breadcrumbs', 'pagination', 'total','min','max'));
     }
 
 }

@@ -48,6 +48,7 @@
                                         <a href="#"><i class="ti-heart"></i></a>
                                     </div>
                                 </div>
+
                                 <div class="product-peice-addtocart">
                                     <div class="product-peice-3">
                                         <?php if($product->old_price): ?>

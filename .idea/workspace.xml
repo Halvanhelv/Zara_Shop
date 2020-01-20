@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bfb144f-acd8-4d18-a73a-a63b81dc0851" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/params.php" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/753a929eb34db4bc8cb58be933396c55.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/753a929eb34db4bc8cb58be933396c55.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/f500c49ff86f9c4cb23743bdebc843b4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/f500c49ff86f9c4cb23743bdebc843b4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +135,12 @@
       <workItem from="1578250748577" duration="21003000" />
       <workItem from="1579238383242" duration="828000" />
       <workItem from="1579239219188" duration="1868000" />
+<<<<<<< HEAD
+      <workItem from="1579450376010" duration="1213000" />
+      <workItem from="1579523021000" duration="12425000" />
+=======
       <workItem from="1579349000869" duration="3102000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
