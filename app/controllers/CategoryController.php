@@ -76,17 +76,30 @@ class   CategoryController extends AppController {
         $start = $pagination->getStart();
 
         $products = \R::find('product', " WHERE status = 'on' AND category_id IN ($ids)  $sql_part  LIMIT $start, $perpage");
-         $min = \R::getAssoc("SELECT MIN(price) FROM product ");
-          $min = implode('',$min);
-        $max = \R::getAssoc("SELECT MAX(price) FROM product ");
-        $max = implode('',$max);
-
+        if (!isset($_GET['price'])) {
+            $min = \R::getAssoc("SELECT MIN(price) FROM product ");
+            $min = implode('', $min);
+            $max = \R::getAssoc("SELECT MAX(price) FROM product ");
+            $max = implode('', $max);
+            $min_step = $min;
+            $max_step = $max;
+        }
+        else
+        {
+            $min = \R::getAssoc("SELECT MIN(price) FROM product ");
+            $min = implode('', $min);
+            $max = \R::getAssoc("SELECT MAX(price) FROM product ");
+            $max = implode('', $max);
+          $price =  Filter::getPrice();
+          $min_step = $price[0];
+          $max_step = $price[1];
+        }
         if($this->isAjax()){
             $this->loadView('filter', compact('products', 'total', 'pagination'));
         }
 
         $this->setMeta($category->title, $category->description, $category->keywords);
-        $this->set(compact('products', 'breadcrumbs', 'pagination', 'total','min','max'));
+        $this->set(compact('products', 'breadcrumbs', 'pagination', 'total','min','max','min_step','max_step'));
     }
 
 }

@@ -289,15 +289,17 @@
 </script>
 <script>
     var min = <?=$min ?>,
-        max = <?=$max ?>;
+        max = <?=$max ?>,
+        min_step = <?=$min_step ?>,
+        max_step = <?=$max_step ?>;
 </script>
 <script>
 
     $('#price-range').slider({
         range: true,
-        min: 0,
+        min: min,
         max: max,
-        values: [0,max],
+        values: [min_step,max_step],
         slide: function(event, ui) {
             $('.price-amount').val('$' + ui.values[0] + ' - $' + ui.values[1]);
         },

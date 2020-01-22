@@ -3,7 +3,7 @@
 return [
     'admin_email' => 'islamgagiev69@gmail.com',
     'shop_name' => 'Магазин ishop2.loc',
-    'pagination' => 2,
+    'pagination' => 1,
     'smtp_host' => 'smtp.gmail.com',
     'smtp_port' => '465',
     'smtp_protocol' => 'ssl',
