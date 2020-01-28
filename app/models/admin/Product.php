@@ -216,14 +216,12 @@ class Product extends AppModel {
                 {
                     $_SESSION['multi'][] = '';
                 }
-<<<<<<< HEAD
+
                 if (!in_array($new_name,$_SESSION['multi'])) {
                     $_SESSION['multi'][] = $new_name;
-=======
-                    if (!in_array($new_name,$_SESSION['multi'])) {
-                        $_SESSION['multi'][] = $new_name;
-                    }
->>>>>>> origin/master
+
+
+
                 }
             }
             elseif($name == 'slider'){

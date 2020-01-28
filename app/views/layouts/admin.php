@@ -390,6 +390,17 @@
                         <li><a href="<?= ADMIN ?>/brand/add">Добавить бренд</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-amazon"></i> <span>Модификации</span>
+                        <span class="pull-right-container">
+<i class="fa fa-angle-left pull-right"></i>
+</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="<?= ADMIN ?>/modification">Список модификаций</a></li>
+                        <li><a href="<?= ADMIN ?>/modification/add">Добавить модификацию</a></li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
