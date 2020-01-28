@@ -51,8 +51,9 @@ class ProductController extends AppController
             $alias = $_GET['alias'];
             if ($alias = \R::findOne('product', 'alias = ?', [$alias])) {
                 $gallery = \R::findAll('gallery', 'product_id = ? LIMIT 2', [$alias->id]);
+                $mods = \R::findAll('modification', 'alias = ?', [$alias]);
                 if ($this->isAjax()) {
-                    $this->loadView('quick', compact('alias','gallery'));
+                    $this->loadView('quick', compact('alias','gallery','mods'));
                 }
             }
         }

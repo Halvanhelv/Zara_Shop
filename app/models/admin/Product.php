@@ -48,6 +48,8 @@ class Product extends AppModel {
                 }
 
             }
+
+
             $sql_part = '';
             foreach ($tmp as $v => $k) {
                 $v = (int)$v;
@@ -86,6 +88,80 @@ class Product extends AppModel {
             }
         }
     }
+    public function modification($id,$data)
+    {
+        $detail = \R::getAll("SELECT  product_id, order_mod_id,price,modification.title AS mod_title FROM modification JOIN order_mod ON order_mod.id = modification.id WHERE modification.product_id = ?", [$id]);
+
+        $tmp = [];
+        if(!empty($data['modification'])) {
+            foreach ($data['modification'] as $key => $value) {
+                foreach ($data['mod_attrs'] as $k => $v) {
+
+                    if ($key == $k) {
+                        $tmp[$k]['mod_title'] = $v;
+                    }
+                }
+                foreach ($data['mod_price'] as $k => $v) {
+
+                    if ($key == $k) {
+                        $tmp[$k]['price'] = $v;
+                    }
+                }
+                foreach ($data['modification'] as $k => $v) {
+
+                    if ($key == $k) {
+                        $tmp[$k]['order_mod_id'] = $v;
+                    }
+                }
+
+                        $tmp[$key]['product_id'] = $id;
+
+
+
+            $sql_part = '';
+            foreach ($tmp as $key => $value) {
+                    $k = (int)$value['order_mod_id'];
+                    $s = (string)$value['mod_title'];
+                    $p =  (int)$value['price'];
+                    $sql_part .= "($id, $k,'$s','$p'),";
+
+            }
+
+            $sql_part = rtrim($sql_part, ',');
+            // если добавляется характеристика товара
+            if (empty($detail) && !empty($data['modification'])) {
+                \R::exec("INSERT INTO product_detail (product_id, attribute_id,attr_value) VALUES $sql_part");
+                return;
+            }
+        }
+
+        // если менеджер убрал характеристики товара
+        if(empty($data['modification']) && !empty($detail)) {
+
+
+            \R::exec("DELETE FROM product_detail WHERE product_id = ?", [$id]);
+
+            return;
+        }
+        // если изменились характеристики   - удалим и запишем новые
+
+        if(!empty($data['modification']))
+        {
+debug($tmp);
+debug('----');
+debug($detail);
+for ($i = 0;$i < count($tmp);$i++) {
+    $result = array_diff($tmp[$i], $detail[$i]);
+
+}
+            if (!empty($result) || count($tmp) != count($detail)) {
+                \R::exec("DELETE FROM product_detail WHERE product_id = ?", [$id]);
+
+                \R::exec("INSERT INTO product_detail (product_id, attribute_id,attr_value) VALUES $sql_part");
+                return;
+            }
+        }
+    }}
     public function editRelatedProduct($id, $data){
         $related_product = \R::getCol('SELECT related_id FROM related_product WHERE product_id = ?', [$id]);
         // если менеджер убрал связанные товары - удаляем их

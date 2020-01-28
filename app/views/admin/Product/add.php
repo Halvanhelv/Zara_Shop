@@ -55,6 +55,7 @@
                                 'prepend' => '<option>Выберите бренд</option>',
                             ]) ?>
                         </div>
+
                         <div class="form-group">
                             <label for="keywords">Ключевые слова</label>
                             <input type="text" name="keywords" class="form-control" id="keywords" placeholder="Ключевые слова" value="<?php isset($_SESSION['form_data']['keywords']) ? h($_SESSION['form_data']['keywords']) : null; ?>">
@@ -111,6 +112,13 @@
 
                         </div>
                         <div class="container-fluid attr_block " >
+
+                        </div>
+                        <div class="container-fluid" style="padding-bottom: 20px">
+                            <div class="col-md-2  "><button type="button" class=" add_mod btn btn-block btn-success">Добавить модификацию</button></div>
+
+                        </div>
+                        <div class="container-fluid mod_block " >
 
                         </div>
                         <!--https://dcrazed.com/html5-jquery-file-upload-scripts/-->

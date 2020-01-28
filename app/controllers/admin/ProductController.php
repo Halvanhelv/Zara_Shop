@@ -97,6 +97,8 @@ class ProductController extends AppController {
             $id = $this->getRequestID(false);
             $product = new Product();
             $data = $_POST;
+           debug($data);
+
             $product->load($data);
             $product->attributes['status'] = $product->attributes['status'] ? 'on' : 'off';
             $product->attributes['hit'] = $product->attributes['hit'] ? 'on' : 'off';
@@ -105,6 +107,7 @@ class ProductController extends AppController {
             $product->attributes['slider'] = $product->attributes['slider'] ? 'on' : 'off';
             $product->attributes['best_seller'] = $product->attributes['best_seller'] ? 'on' : 'off';
             $product->getImg();
+            $product->modification($id,$data);
             if(!$product->validate($data)){
                 $product->getErrors();
                 redirect();
@@ -154,6 +157,7 @@ class ProductController extends AppController {
             $product->attributes['slider'] = $product->attributes['slider'] ? 'on' : 'off';
             $product->attributes['best_seller'] = $product->attributes['best_seller'] ? 'on' : 'off';
             $product->getImg();
+
 
 
             if(!$product->validate($data)){

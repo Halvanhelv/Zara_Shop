@@ -270,6 +270,53 @@ $(document).ready(function () {
     })
 
 });
+$(document).ready(function () {
+    $(".add_mod").on('click',function () {
+
+        $('.attr_block').append("  <div class=\"row\">\n" +
+            "                            <div class=\"form-group col-md-4  \">\n" +
+            "\n" +
+            "                                <label for=\"modification\">Атрибут</label>\n" +
+            "                                <select name=\"modification[]\" class=\"form-control select3\"></select>\n" +
+            "                            </div>\n" +
+            "                            <div class=\"form-group col-md-4 \">\n" +
+            "                                <label>Значение</label>\n" +
+            "                                <input type=\"text\" name=\"mod_attrs[]\" class=\"form-control\" placeholder=\"Введите значение ...\" autocomplete=\"off\" style=\"background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto; \" required>\n" +
+            "                                <span class=\"glyphicon form-control-feedback\" aria-hidden=\"true\"></span>\n" +
+            "                            </div>\n" +
+            "                            <div class=\"form-group col-md-3 \">\n" +
+            "                                <label>Цена</label>\n" +
+            "                                <input type=\"text\" name=\"mod_price[]\" class=\"form-control\" placeholder=\"Введите значение ...\" autocomplete=\"off\" style=\"background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto; \" required>\n" +
+            "                                <span class=\"glyphicon form-control-feedback\" aria-hidden=\"true\"></span>\n" +
+            "                            </div>\n" +
+            "                            <div class=\"form-group col-md-1  \">\n" +
+            "                                <label for=\"modification\"></label>\n" +
+            "                                <button type=\"button\" class=\"btn btn-block btn-danger delete-attr delete\">удалить</button>\n" +
+            "                            </div>\n" +
+
+            "                            </div>");
+        $('.select3').select2({placeholder: "Введите нужный атрибут",
+            //minimumInputLength: 2,
+            cache: true,
+            ajax: {
+                url: adminpath + "/modification/modification-product",
+                delay: 250,
+                dataType: 'json',
+                data: function (params) {
+                    return {
+                        q: params.term,
+                        page: params.page
+                    };
+                },
+                processResults: function (data, params) {
+                    return {
+                        results: data.items
+                    };
+                }
+            }});
+    })
+
+});
 $('body').on('click', '.delete-attr', function() {
     console.log(this);
     $(this).closest('.row').fadeOut(300).remove();
