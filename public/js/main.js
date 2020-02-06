@@ -311,10 +311,13 @@ $(function() {
 
 
 
-$('body').on('click', '.cart_reload .le-quantity', function() {
+$('body').on('click', '.cart_reload .qty-reload', function() {
     // var id =   $('.le-quantity input').attr('id'),
+    console.log(123);
     var id = $(this).find('input').attr('id'),
         qty = $(this).find('input').attr('value') ? $(this).find('input').attr('value') : 1;
+    console.log(id);
+    console.log(qty);
     if (qty < 1) {
         qty = 1;
     }

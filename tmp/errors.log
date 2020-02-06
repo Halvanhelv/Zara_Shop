@@ -2916,3 +2916,89 @@
 =================
 [2020-01-29 00:13:44] Текст ошибки: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 186
 =================
+[2020-02-06 17:25:47] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:25:47] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:25:56] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:25:56] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:28:07] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:32:47] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:32:47] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:32:48] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:34:12] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:34:12] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:41:23] Текст ошибки: syntax error, unexpected ')' | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\app\views\Cart\view.php | Строка: 19
+=================
+[2020-02-06 17:41:23] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:41:26] Текст ошибки: syntax error, unexpected ')' | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\app\views\Cart\view.php | Строка: 19
+=================
+[2020-02-06 17:41:26] Текст ошибки: syntax error, unexpected ')' | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\app\views\Cart\view.php | Строка: 19
+=================
+[2020-02-06 17:46:46] Текст ошибки: syntax error, unexpected '?>' | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\app\views\Cart\view.php | Строка: 22
+=================
+[2020-02-06 17:46:46] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 17:46:56] Текст ошибки: syntax error, unexpected '?>' | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\app\views\Cart\view.php | Строка: 22
+=================
+[2020-02-06 18:25:32] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:25:32] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:26:01] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:26:02] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:26:26] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:26:26] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:33:42] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:33:42] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:38:01] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:38:01] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:49:45] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:49:45] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:50:28] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:50:28] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:50:38] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:50:38] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:51:02] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:51:02] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:51:19] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:51:19] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:51:37] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:51:37] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:58:39] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:58:39] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:58:59] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2020-02-06 18:58:59] Текст ошибки: Страница не найдена | Файл: C:\Users\Zurab\Documents\OSPanel\domains\Zarav\vendor\ishop\core\Router.php | Строка: 39
+=================

@@ -1,142 +1,105 @@
-<div class="animate-dropdown cart_view">
-        <!-- ========================================= BREADCRUMB ========================================= -->
-        <div id="top-mega-nav">
-            <div class="container">
-                <nav>
-                    <ul class="inline">
-                        <li class="dropdown le-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-list"></i> shop by department
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Computer Cases & Accessories</a></li>
-                                <li><a href="#">CPUs, Processors</a></li>
-                                <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
-                                <li><a href="#">Graphics, Video Cards</a></li>
-                                <li><a href="#">Interface, Add-On Cards</a></li>
-                                <li><a href="#">Laptop Replacement Parts</a></li>
-                                <li><a href="#">Memory (RAM)</a></li>
-                                <li><a href="#">Motherboards</a></li>
-                                <li><a href="#">Motherboard &amp; CPU Combos</a></li>
-                                <li><a href="#">Motherboard Components</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="breadcrumb-nav-holder">
-                            <ul>
-                                <li class="breadcrumb-item  ">
-                                    <a href="<?= PATH ?>">Главная</a>
-                                </li>
-                                <li class="breadcrumb-item current ">
-                                    <a onclick="return false" class="click_disabled">Корзина</a>
-                                </li>
-
-                            </ul>
-                        </li><!-- /.breadcrumb-nav-holder -->
-                    </ul>
-                </nav>
-            </div><!-- /.container -->
-        </div><!-- /#top-mega-nav -->
-        <!-- ========================================= BREADCRUMB : END ========================================= -->
-    </div>
-
-    <?php if(!empty($_SESSION['cart'])):?>
-        <section id="cart-page">
-        <div class="container">
-            <!-- ========================================= CONTENT ========================================= -->
-            <div class="col-xs-12 col-md-9 items-holder no-margin ">
-<?php foreach($_SESSION['cart'] as $id => $item): ?>
-                <div class="row no-margin cart_reload cart-item del-items">
-                    <div class="col-xs-12 col-sm-2 no-margin">
-                        <a href="#" class="thumb-holder">
-                            <img class="lazy" alt="<?=$item['title'] ?>" style="max-width: 73px; max-height: 73px;" src="images/<?= $item['img'] ?>" />
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
+<div class="product-cart-area hm-3-padding pt-120 pb-130">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="table-content table-responsive">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="product-name">Товар</th>
+                            <th class="product-price">Название</th>
+                            <th class="product-name">Цена</th>
+                            <th class="product-price">Количество</th>
+                            <th class="product-quantity">Итого</th>
+                            <th class="product-subtotal">Удалить</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+<?php debug($_SESSION); ?>
+                        <?php foreach ($_SESSION['cart'] as $id => $item): ?>
+                        <tr class="del-items cart_reload">
+                            <td class="product-thumbnail">
+                                <a href="#"><img src="images/background/141on135/<?= $item['img'] ?>" alt=""></a>
+                            </td>
+                            <td class="product-name">
+                                <a href="#"><?= $item['title'] ?></a>
+                            </td>
+                            <td class="product-price"><span class="amount"><?=$curr['symbol_left'];?><?=number_format($item['price'] * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span></td>
+                            <td class="product-quantity qty-reload">
+                                <div class="quantity-range">
+                                    <input class="input-text qty text" type="number" id="<?=$id?>" step="1" min="0" value="<?= $item['qty'] ?>" title="Qty" size="4">
+                                </div>
+                            </td>
+                            <td class="product-subtotal"><?=$curr['symbol_left'];?><?=number_format($item['price'] * $curr['value'] * $item['qty'], 0, ',', ' ');?><?=$curr['symbol_right'];?></td>
+                            <td class="product-cart-icon product-subtotal"><a href="#" class="del-item1" data-id="<?=$id;?>"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
+                        </tr>
+<?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="cart-shiping-update">
+                    <div class="cart-shipping">
+                        <a class="btn-style cr-btn" href="#">
+                            <span>continue shopping</span>
                         </a>
                     </div>
-
-                    <div class="col-xs-12 col-sm-5 ">
-                        <div class="title">
-                            <a href="product/<?=$item['alias'] ?>"><?=$item['title'] ?></a>
+                    <div class="update-checkout-cart">
+                        <div class="update-cart">
+                            <button class="btn-style cr-btn"><span>update</span></button>
                         </div>
-                        <div class="brand">sony</div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-3 no-margin">
-                            <div class="quantity ">
-                                <div class="le-quantity">
-                                    <form>
-
-                                        <a class="minus"  href="<?=$id?>"></a>
-                                        <input name="quantity"  readonly="readonly" id="<?=$id?>" type="text"  value="<?=$item['qty'] ?>" />
-                                        <a class="plus" href="<?=$id?>"></a>
-                                    </form>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="  col-xs-12 col-sm-2 no-margin">
-                        <div class="price">
-                            <?=number_format($item['price'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?> <?= $_SESSION['cart.currency']['symbol_right'] ?>
+                        <div class="update-cart">
+                            <a class="btn-style cr-btn" href="#">
+                                <span>checkout</span>
+                            </a>
                         </div>
-
-                        <a class="close-btn del-item1" data-id="<?=$id;?>" href="/cart/delete/?id=<?=$id ?>"></a>
                     </div>
-                </div><!-- /.cart-item -->
-                    <?php endforeach;?>
-
+                </div>
             </div>
-            <!-- ========================================= CONTENT : END ========================================= -->
-
-            <!-- ========================================= SIDEBAR ========================================= -->
-
-            <form method="post" name="buy" action="cart/order" role="form" data-toggle="validator">
-            <div class="col-xs-12 col-md-3 no-margin sidebar ">
-                <div class="widget cart-summary">
-                    <h1 class="border">Корзина</h1>
-                    <div class="body">
-                        <ul class="tabled-data no-border inverse-bold">
-                            <li>
-                                <label>cart subtotal</label>
-                                <div class="value pull-right total_ajax_price"><?= $_SESSION['cart.currency']['symbol_left']?><?=number_format($_SESSION['cart.sum'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?> <?=$_SESSION['cart.currency']['symbol_right'] ?></div>
-                            </li>
-                            <li>
-                                <label>shipping</label>
-                                <div class="value pull-right">free shipping</div>
-                            </li>
-                        </ul>
-                        <ul id="total-price" class="tabled-data inverse-bold no-border">
-                            <li>
-                                <label>order total</label>
-                                <div class="value pull-right total_ajax_price"><?= $_SESSION['cart.currency']['symbol_left']?><?=number_format($_SESSION['cart.sum'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?> <?=$_SESSION['cart.currency']['symbol_right'] ?></div>
-                            </li>
-                        </ul>
-                        <div class="buttons-holder">
-                            <textarea name="note" class="form-control"></textarea>
- </div>
-                        <div class="field-row clearfix">
-                                        <span class="pull-left">
-                                            <label class="content-color"><input type="checkbox" name="pay" id="pay" class="le-checbox auto-width inline"> <span class="bold">Купить онлайн</span></label>
-
-                        </div>
-                            <a class="le-button big" href="javascript: document.buy.submit();" >Оформить заказ</a>
-
-                        </div>
-                    </div>
-                </div><!-- /.widget -->
-            </form>
-
-
-            <!-- ========================================= SIDEBAR : END ========================================= -->
         </div>
-    </section>
-<?php else: ?>
-        <div class="container empty_cart" ><img src="images/empty.svg" alt="" style="max-height: 500px;margin: 0 auto;display: block"></div>
-    <?php endif;?>
-
-    <!-- ============================================================= FOOTER ============================================================= -->
-
-    <!-- ============================================================= FOOTER : END ============================================================= -->
-
-
-
-
-
+        <div class="row">
+            <div class="col-md-7 col-sm-6">
+                <div class="discount-code">
+                    <h4>enter your discount code</h4>
+                    <div class="coupon">
+                        <input type="text">
+                        <input class="cart-submit" type="submit" value="enter">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-6">
+                <div class="shop-total">
+                    <h3>cart total</h3>
+                    <ul>
+                        <li>
+                            sub total
+                            <span>$909.00</span>
+                        </li>
+                        <li>
+                            tax
+                            <span>$9.00</span>
+                        </li>
+                        <li class="order-total">
+                            shipping
+                            <span>0</span>
+                        </li>
+                        <li>
+                            order total
+                            <span>$918.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cart-btn text-center mb-15">
+                    <a href="#">payment</a>
+                </div>
+                <div class="continue-shopping-btn text-center">
+                    <a href="#">continue shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
