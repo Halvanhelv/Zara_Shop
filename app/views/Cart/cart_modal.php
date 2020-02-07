@@ -9,7 +9,7 @@
             </div>
             <div class="cart-title">
                 <h3><a href="#"><?=$item['title'];?></a></h3>
-                <span> <?=$item['qty'];?>  x  <?=number_format($item['price'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?>  <?=$_SESSION['cart.currency']['symbol_right'] ;?></span>
+                <span class=" price_id_<?= $id ?>">   <?=number_format($item['price'] * $_SESSION['cart.currency']['value'] * $item['qty'], 0, ',', ' ');?>  <?=$_SESSION['cart.currency']['symbol_right'] ;?></span>
             </div>
             <div class="cart-delete">
                 <a href="#" class="del-item" data-id="<?=$id;?>"><i class="ti-trash" ></i></a>

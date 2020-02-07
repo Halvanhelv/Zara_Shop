@@ -18,7 +18,7 @@
                         <tbody>
 <?php debug($_SESSION); ?>
                         <?php foreach ($_SESSION['cart'] as $id => $item): ?>
-                        <tr class="del-items cart_reload">
+                        <tr class="del-items cart_reload" >
                             <td class="product-thumbnail">
                                 <a href="#"><img src="images/background/141on135/<?= $item['img'] ?>" alt=""></a>
                             </td>
@@ -31,7 +31,7 @@
                                     <input class="input-text qty text" type="number" id="<?=$id?>" step="1" min="0" value="<?= $item['qty'] ?>" title="Qty" size="4">
                                 </div>
                             </td>
-                            <td class="product-subtotal"><?=$curr['symbol_left'];?><?=number_format($item['price'] * $curr['value'] * $item['qty'], 0, ',', ' ');?><?=$curr['symbol_right'];?></td>
+                            <td class="product-subtotal product-total-price " id="<?= $id ?>"><?=$curr['symbol_left'];?><?=number_format($item['price'] * $curr['value'] * $item['qty'], 0, ',', ' ');?><?=$curr['symbol_right'];?></td>
                             <td class="product-cart-icon product-subtotal"><a href="#" class="del-item1" data-id="<?=$id;?>"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
                         </tr>
 <?php endforeach; ?>
