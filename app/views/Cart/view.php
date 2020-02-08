@@ -1,6 +1,7 @@
 <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <div class="product-cart-area hm-3-padding pt-120 pb-130">
     <div class="container-fluid">
+        <?php  if(!empty($_SESSION['cart'])):?>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="table-content table-responsive">
@@ -16,7 +17,7 @@
                         </tr>
                         </thead>
                         <tbody>
-<?php debug($_SESSION); ?>
+
                         <?php foreach ($_SESSION['cart'] as $id => $item): ?>
                         <tr class="del-items cart_reload" >
                             <td class="product-thumbnail">
@@ -35,6 +36,8 @@
                             <td class="product-cart-icon product-subtotal"><a href="#" class="del-item1" data-id="<?=$id;?>"><i class="ion-ios-trash-outline" aria-hidden="true"></i></a></td>
                         </tr>
 <?php endforeach; ?>
+
+
                         </tbody>
                     </table>
                 </div>
@@ -101,5 +104,8 @@
                 </div>
             </div>
         </div>
+        <?php else: ?>
+        <h1 style="text-align: center">Корзина Пуста</h1>
+        <?php endif; ?>
     </div>
 </div>
