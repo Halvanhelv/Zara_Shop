@@ -76,24 +76,11 @@ class   CategoryController extends AppController {
         $start = $pagination->getStart();
 
         $products = \R::find('product', " WHERE status = 'on' AND category_id IN ($ids)  $sql_part  LIMIT $start, $perpage");
-        if (!isset($_GET['price'])) {
-            $min = \R::getAssoc("SELECT MIN(price) FROM product ");
-            $min = implode('', $min);
-            $max = \R::getAssoc("SELECT MAX(price) FROM product ");
-            $max = implode('', $max);
-            $min_step = $min;
-            $max_step = $max;
-        }
-        else
-        {
-            $min = \R::getAssoc("SELECT MIN(price) FROM product ");
-            $min = implode('', $min);
-            $max = \R::getAssoc("SELECT MAX(price) FROM product ");
-            $max = implode('', $max);
-          $price =  Filter::getPrice();
-          $min_step = $price[0];
-          $max_step = $price[1];
-        }
+          $price =  Filter::price_filter();
+          $min = $price['min'];
+        $max = $price['max'];
+        $min_step = $price['min_step'];
+        $max_step = $price['max_step'];
         if($this->isAjax()){
             $this->loadView('filter', compact('products', 'total', 'pagination'));
         }

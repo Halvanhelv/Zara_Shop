@@ -80,7 +80,35 @@ class Filter  {
 
         return $attrs;
     }
+       public static function price_filter()
+{
+    if (!isset($_GET['price'])) {
+        $min = \R::getAssoc("SELECT MIN(price) FROM product ");
+        $min = implode('', $min);
+        $max = \R::getAssoc("SELECT MAX(price) FROM product ");
+        $max = implode('', $max);
+        $price_range['min'] = $min;
+        $price_range['max'] = $max;
+        $price_range['min_step'] = $min;
+        $price_range['max_step'] = $max;
 
+    }
+    else
+    {
+        $min = \R::getAssoc("SELECT MIN(price) FROM product ");
+        $min = implode('', $min);
+        $max = \R::getAssoc("SELECT MAX(price) FROM product ");
+        $max = implode('', $max);
+        $price =  self::getPrice();
+
+        $price_range['min'] = $min;
+        $price_range['max'] = $max;
+        $price_range['min_step'] = $price[0];
+        $price_range['max_step'] =  $price[1];
+    }
+         return $price_range;
+
+}
     public static function getFilter(){
         $filter = null;
 
