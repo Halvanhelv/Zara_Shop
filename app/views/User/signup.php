@@ -1,116 +1,112 @@
+<style>
+    input.error {
+        border: 1px solid #ff0000;
+    }
+    label.error {
+        color: #ff0000;
+        font-weight: normal;
+    }
 
-<div class="animate-dropdown">
-    <!-- ========================================= BREADCRUMB ========================================= -->
-    <div id="top-mega-nav">
-        <div class="container">
-            <nav>
-                <ul class="inline">
-                    <li class="dropdown le-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-list"></i> shop by department
+    input.error {
+        border: 1px solid #ff0000;
+    }
+    label.error {
+        color: #ff0000;
+        font-weight: normal;
+    }</style>
+<div class="login-register-area ptb-130 hm-3-padding">
+    <?php if(isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger">
+            <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+        </div>
+    <?php endif; ?>
+    <?php if(isset($_SESSION['success'])): ?>
+        <div class="alert alert-success">
+            <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+        </div>
+    <?php endif; ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 ml-auto mr-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-toggle="tab" href="#lg1">
+                            <h4> login </h4>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Computer Cases & Accessories</a></li>
-                            <li><a href="#">CPUs, Processors</a></li>
-                            <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
-                            <li><a href="#">Graphics, Video Cards</a></li>
-                            <li><a href="#">Interface, Add-On Cards</a></li>
-                            <li><a href="#">Laptop Replacement Parts</a></li>
-                            <li><a href="#">Memory (RAM)</a></li>
-                            <li><a href="#">Motherboards</a></li>
-                            <li><a href="#">Motherboard &amp; CPU Combos</a></li>
-                            <li><a href="#">Motherboard Components</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="breadcrumb-nav-holder">
-                        <ul>
-                            <li class="breadcrumb-item">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li class="breadcrumb-item current gray">
-                                <a href="about.html">Authentication</a>
-                            </li>
-                        </ul>
-                    </li><!-- /.breadcrumb-nav-holder -->
-                </ul>
-            </nav>
-        </div><!-- /.container -->
-    </div><!-- /#top-mega-nav -->
-    <!-- ========================================= BREADCRUMB : END ========================================= -->
+                        <a data-toggle="tab" href="#lg2">
+                            <h4> register </h4>
+                        </a>
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-form">
+                                    <form action="user/login" method="post" data-toggle="validator" id="signup" role="form">
+                                        <input type="text" name="login"  placeholder="Username" required>
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <input type="password" name="password" placeholder="Password" required>
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+                                                <input type="checkbox">
+                                                <label>Remember me</label>
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                            <button type="submit" class="btn-style cr-btn"><span>Login</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="lg2" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-form">
+                                    <form class="form-horizontal" method="post" id="register">
+                                        <div class="form-group">
+                                            <label for="login" class=" control-label">Логин <span class="red">*</span></label>
+                                            <div class="">
+                                                <input type="text" class="form-control" id="login" name="login" placeholder="Логин" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label  for="password" class=" control-label">Пароль<span class="red">*</span></label>
+                                            <div class="">
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Пароль" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name" class=" control-label">Имя <span class="red">*</span></label>
+                                            <div class="">
+                                                <input  class="form-control" id="name" name="name" placeholder="Имя" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class=" control-label">Почта <span class="red">*</span></label>
+                                            <div class="">
+                                                <input type="email" class="form-control" id="name" name="email" placeholder="Почта" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address" class=" control-label">Адрес <span class="red">*</span></label>
+                                            <div class="">
+                                                <input type="address" class="form-control" id="address" name="address" placeholder="Адрес" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="button-box">
+                                                <button type="submit" class="btn-style cr-btn"><span>Register</span></button>
+                                            </div></div>
+                                </div>
+                            </div>
+                            </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<main id="authentication" class="inner-bottom-md">
-    <div class="container">
-        <div class="row">
-
-
-
-            <div class="col-md-6 col-md-offset-3">
-                <section class="section register inner-left-xs">
-                    <h2 class="bordered">Регистрация</h2>
-                    <?php if(isset($_SESSION['error'])): ?>
-                        <div class="alert alert-danger">
-                            <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
-                        </div>
-                    <?php endif; ?>
-                    <?php if(isset($_SESSION['success'])): ?>
-                        <div class="alert alert-success">
-                            <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
-                        </div>
-                    <?php endif; ?>
-                    <p>Create your own Media Center account</p>
-
-                    <form role="form" class="register-form cf-style-1" method="post" action="user/signup" id="signup"  data-toggle="validator">
-                        <div class="field-row has-feedback form-group ">
-                            <label for="login">Login</label>
-                            <input   type="text" name="login" class=" le-input" id ="login" placeholder="Login" value="<?=isset($_SESSION['form_data']['login']) ? h($_SESSION['form_data']['login']) : '';?>" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                        <div class="field-row has-feedback form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="le-input form-control " id="password" placeholder="Password" data-error="Пароль должен включать не менее 6 символов" data-minlength="6" value="<?=isset($_SESSION['form_data']['password']) ? h($_SESSION['form_data']['password']) : '';?>" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="field-row has-feedback form-group">
-                            <label for="name">Имя</label>
-                            <input type="text" name="name" class="le-input" id="name" placeholder="Имя" value="<?=isset($_SESSION['form_data']['name']) ? h($_SESSION['form_data']['name']) : '';?>" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-
-                        </div>
-                        <div class="field-row has-feedback form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" class="le-input" id="email" placeholder="Email" value="<?=isset($_SESSION['form_data']['email']) ? h($_SESSION['form_data']['email']) : '';?>" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-
-                        </div>
-                        <div class="field-row has-feedback form-group">
-                            <label for="address">Address</label>
-                            <input type="text" name="address" class="le-input" id="address" placeholder="Address" value="<?=isset($_SESSION['form_data']['address']) ? h($_SESSION['form_data']['address']) : '';?>" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-
-                        </div>
-
-                        <div class="buttons-holder">
-                            <button type="submit" class="le-button huge">Зарегистрировать</button>
-                        </div><!-- /.buttons-holder -->
-                    </form>
-
-                    <?php if(isset($_SESSION['form_data'])) unset($_SESSION['form_data']); ?>
-                    <h2 class="semi-bold">Sign up today and you'll be able to :</h2>
-
-                    <ul class="list-unstyled list-benefits">
-                        <li><i class="fa fa-check primary-color"></i> Speed your way through the checkout</li>
-                        <li><i class="fa fa-check primary-color"></i> Track your orders easily</li>
-                        <li><i class="fa fa-check primary-color"></i> Keep a record of all your purchases</li>
-                    </ul>
-
-                </section><!-- /.register -->
-
-            </div><!-- /.col -->
-
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</main>

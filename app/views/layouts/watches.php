@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+   >
 
 </head>
 <body>
@@ -79,7 +80,11 @@
                                 </button>
                             </div>
                             <div class="header-login same-style">
-                                <a href="login-register.html">
+                                <?php if(!empty($_SESSION['user'])): ?>
+                                <a href="user/cabinet">
+                                    <?php else: ?>
+                                    <a href="user/signup">
+                                    <?php endif; ?>
                                     <span class="ti-user"></span>
                                 </a>
                             </div>
@@ -270,7 +275,9 @@
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/va/dist/jquery.validate.js"></script>
 <script src="js/main.js"></script>
+
 <script>
     $( function() {
 
@@ -336,6 +343,73 @@ let price = ui.values[0] + ',' +ui.values[1];
     $('.product-filter-toggle').on('click', function() {
         $('.product-filter-wrapper').slideToggle();
     })
+</script>
+<script>
+    $(function(){
+        $('#register').validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                login: {
+                    required: true,
+                    minlength: 6
+                }
+            },
+            messages: {
+                name: {
+                    required: "Поле 'Имя' обязательно к заполнению",
+                    minlength: "Введите не менее 2-х символов в поле 'Имя'"
+                },
+                login: {
+                    required: "Поле 'Логин' обязательно к заполнению",
+                    minlength: "Введите не менее 6-х символов в поле 'Логин'"
+                },
+                address: {
+                    required: "Поле 'Адрес' обязательно к заполнению",
+                    minlength: "Введите не менее 6-х символов в поле 'Адрес'"
+                },
+                email: {
+                    required: "Поле 'Email' обязательно к заполнению",
+                    email: "Необходим формат адреса email"
+                },
+                url: "Поле 'Сайт' обязательно к заполнению"
+            }
+        }),
+    });
+</script>
+<script>
+    $(function(){
+        $('#signup').validate({
+            rules: {
+
+                login: {
+                    required: true,
+                    minlength: 6
+                },
+                password: {
+                    required: true,
+
+                }
+
+            },
+            messages: {
+
+                login: {
+                    required: "Поле 'Логин' обязательно к заполнению",
+                    minlength: "Введите не менее 6-х символов в поле 'Логин'"
+                },
+                password: {
+                    required: "Поле 'Логин' обязательно к заполнению",
+                    minlength: "Введите не менее 6-х символов в поле 'Логин'"
+                };
+
+
+
+            }
+        }),
+    });
 </script>
 </body>
 <?php
