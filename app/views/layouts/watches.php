@@ -376,39 +376,40 @@ let price = ui.values[0] + ',' +ui.values[1];
                 },
                 url: "Поле 'Сайт' обязательно к заполнению"
             }
-        }),
+        })
     });
 </script>
 <script>
     $(function(){
-        $('#signup').validate({
+        $('#sign').validate({
             rules: {
 
-                login: {
+                sign_login: {
                     required: true,
                     minlength: 6
                 },
-                password: {
+                sign_password: {
                     required: true,
+                    minlength: 6
 
                 }
 
             },
             messages: {
 
-                login: {
+                sign_login: {
                     required: "Поле 'Логин' обязательно к заполнению",
                     minlength: "Введите не менее 6-х символов в поле 'Логин'"
                 },
-                password: {
+                sign_password: {
                     required: "Поле 'Логин' обязательно к заполнению",
-                    minlength: "Введите не менее 6-х символов в поле 'Логин'"
-                };
+                    minlength: "Введите не менее 6-х символов в поле 'Пароль'"
+                },
 
 
 
             }
-        }),
+        })
     });
 </script>
 </body>

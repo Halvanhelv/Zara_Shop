@@ -14,6 +14,17 @@
         color: #ff0000;
         font-weight: normal;
     }</style>
+<div class="breadcrumb-area mt-37 hm-4-padding">
+    <div class="container-fluid">
+        <div class="breadcrumb-content text-center border-top-2">
+            <h2>Войти</h2>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li>Войти</li>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class="login-register-area ptb-130 hm-3-padding">
     <?php if(isset($_SESSION['error'])): ?>
         <div class="alert alert-danger">
@@ -41,10 +52,10 @@
                         <div id="lg1" class="tab-pane active">
                             <div class="login-form-container">
                                 <div class="login-form">
-                                    <form action="user/login" method="post" data-toggle="validator" id="signup" role="form">
-                                        <input type="text" name="login"  placeholder="Username" required>
+                                    <form action="user/login" method="post" data-toggle="validator" id="sign" role="form">
+                                        <input type="text" id="sign_login" name="sign_login"  placeholder="Username" required>
                                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                        <input type="password" name="password" placeholder="Password" required>
+                                        <input type="password" name="sign_password" id="sign_password" placeholder="Password" required>
                                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
@@ -83,7 +94,7 @@
                                         <div class="form-group">
                                             <label for="email" class=" control-label">Почта <span class="red">*</span></label>
                                             <div class="">
-                                                <input type="email" class="form-control" id="name" name="email" placeholder="Почта" required>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Почта" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -96,9 +107,9 @@
                                             <div class="button-box">
                                                 <button type="submit" class="btn-style cr-btn"><span>Register</span></button>
                                             </div></div>
-                                </div>
+                                    </form>   </div>
                             </div>
-                            </form>
+
                                 </div>
                             </div>
                         </div>
