@@ -26,7 +26,7 @@
                             <td class="product-name">
                                 <a href="#"><?= $item['title'] ?></a>
                             </td>
-                            <td class="product-price"><span class="amount"><?=$curr['symbol_left'];?><?=number_format($item['price'] * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span></td>
+                            <td class="product-price"><span class="amount"> <?=$curr['symbol_left'];?><?=number_format($item['price'] * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span></td>
                             <td class="product-quantity qty-reload">
                                 <div class="quantity-range">
                                     <input class="input-text qty text" type="number" id="<?=$id?>" step="1" min="0" value="<?= $item['qty'] ?>" title="Qty" size="4">

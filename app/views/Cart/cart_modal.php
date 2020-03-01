@@ -9,7 +9,7 @@
             </div>
             <div class="cart-title">
                 <h3><a href="#"><?=$item['title'];?></a></h3>
-                <span class=" price_id_<?= $id ?>">   <?=number_format($item['price'] * $_SESSION['cart.currency']['value'] * $item['qty'], 0, ',', ' ');?>  <?=$_SESSION['cart.currency']['symbol_right'] ;?></span>
+                <span class=" price_id_<?= $id ?>"><?=$item['qty'];?>  x   <?=number_format($item['price'] * $_SESSION['cart.currency']['value'], 0, ',', ' ');?>  <?=$_SESSION['cart.currency']['symbol_right'] ;?></span>
             </div>
             <div class="cart-delete">
                 <a href="#" class="del-item" data-id="<?=$id;?>"><i class="ti-trash" ></i></a>
@@ -25,7 +25,12 @@
         <span class="total_qty"><?=$_SESSION['cart.qty'];?></span>
         <p class="le-button inverse total_sum"><?=$_SESSION['cart.currency']['symbol_left'];?><?=number_format($_SESSION['cart.sum'], 0, ',', ' ');?> <?= $_SESSION['cart.currency']['symbol_right'];?></p>
     </div>
+    <div class="cart-total">
+        <?php if (!empty($_SESSION['cart.sum'])): ?>
+            <h4>Итого : <span><?= $_SESSION['cart.sum'] ?></span></h4>
+        <?php endif; ?>
 
+    </div>
 
 <?php else: ?>
     <div class="container empty_cart" style="display: none"><img src="images/empty.svg" alt="" style="max-height: 500px;margin: 0 auto;display: block"></div>

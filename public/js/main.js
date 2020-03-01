@@ -218,7 +218,7 @@ function showCart(cart,subtotal = false) {
 
 
     if ($('.total_sum').text() !=0) {
-        $('.cart-total span').html($('.cart-title span').text());
+        // $('.cart-total span').html($('.cart-title span').text());
         $('.header-site-icon .count-style').html($('.total_qty').text());
         $('.total_ajax_price').html($('.top-cart-row .total_sum').text());
         $('.tabled-data .total_ajax_price').html($('.top-cart-row .total_sum').text());
