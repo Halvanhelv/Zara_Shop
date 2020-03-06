@@ -240,7 +240,14 @@
         'tpl' => APP . '/views/layouts/footer.php',
     ]); ?>
     <!-- modal -->
+    <script>
+        var path = '<?=PATH;?>',
+            course = <?=$curr['value'];?>,
+            symboleLeft = '<?=$curr['symbol_left'];?>',
+            symboleRight = '<?=$curr['symbol_right'];?>',
+            cart_sum = <?= $_SESSION['cart.sum'] ?>;
 
+    </script>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

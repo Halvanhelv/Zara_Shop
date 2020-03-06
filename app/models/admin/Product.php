@@ -147,9 +147,7 @@ class Product extends AppModel {
 
         if(!empty($data['modification']))
         {
-debug($tmp);
-debug('----');
-debug($detail);
+
 for ($i = 0;$i < count($tmp);$i++) {
     $result = array_diff($tmp[$i], $detail[$i]);
 

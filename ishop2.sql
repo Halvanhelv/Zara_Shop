@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 28 2020 г., 18:11
+-- Время создания: Мар 03 2020 г., 17:56
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.3.9
 
@@ -445,6 +445,7 @@ INSERT INTO `gallery` (`id`, `product_id`, `img`) VALUES
 CREATE TABLE `modification` (
   `id` int(10) UNSIGNED NOT NULL,
   `product_id` int(10) UNSIGNED NOT NULL,
+  `order_mod_id` int(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `price` float NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -453,13 +454,13 @@ CREATE TABLE `modification` (
 -- Дамп данных таблицы `modification`
 --
 
-INSERT INTO `modification` (`id`, `product_id`, `title`, `price`) VALUES
-(1, 1, 'Silver', 300),
-(2, 1, 'Black', 300),
-(3, 1, 'Dark Black', 305),
-(4, 1, 'Red', 310),
-(5, 2, 'Silver', 80),
-(6, 2, 'Red', 70);
+INSERT INTO `modification` (`id`, `product_id`, `order_mod_id`, `title`, `price`) VALUES
+(1, 270, 1, 'Silver', 300),
+(2, 270, 2, 'Black', 300),
+(3, 1, 0, 'Dark Black', 305),
+(4, 1, 0, 'Red', 310),
+(5, 2, 0, 'Silver', 80),
+(6, 2, 0, 'Red', 70);
 
 -- --------------------------------------------------------
 
@@ -501,6 +502,26 @@ INSERT INTO `order` (`id`, `user_id`, `status`, `date`, `update_at`, `currency`,
 (70, 19, 'new', '2019-12-02 20:06:23', NULL, 'RUB', '', 370),
 (71, 21, 'new', '2019-12-02 20:17:47', NULL, 'RUB', '', 770),
 (72, 19, 'new', '2019-12-14 16:15:06', NULL, 'RUB', '', 39490);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `order_mod`
+--
+
+CREATE TABLE `order_mod` (
+  `id` int(255) NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `order_mod`
+--
+
+INSERT INTO `order_mod` (`id`, `title`) VALUES
+(1, 'Путиин 123'),
+(2, 'Хуйло'),
+(3, 'Хуйло');
 
 -- --------------------------------------------------------
 
@@ -601,14 +622,6 @@ CREATE TABLE `product_detail` (
 
 INSERT INTO `product_detail` (`id`, `product_id`, `attribute_id`, `attr_value`) VALUES
 (300, 271, 4, 'ацацу'),
-(301, 270, 4, 'Смартфон'),
-(302, 270, 6, 'IOS 11'),
-(303, 270, 7, 'Классический '),
-(304, 270, 8, 'водозащита'),
-(305, 270, 9, 'сенсорные кнопки'),
-(306, 270, 10, '1'),
-(307, 270, 12, 'есть'),
-(308, 270, 13, '202 г'),
 (309, 272, 5, '123123');
 
 -- --------------------------------------------------------
@@ -868,7 +881,8 @@ INSERT INTO `user` (`id`, `login`, `password`, `email`, `name`, `address`, `role
 (16, 'GAGIEV228', '$2y$10$PibjsRXoqMXKZuZy2GI87e7687yMHeQOQg7VrVhCKvERHUPDm8BHu', 'GAGIEV228@gmail.com', 'GAGIEV228', 'GAGIEV228', 'user'),
 (17, 'GAGIEV22', '$2y$10$uDMpyUg5Nj2m47lUx2GL2.sLsE4IP75aVNBe7CrPocuCvQRiO7IZW', 'GAGIEV22@gmail.com', 'GAGIEV22', 'GAGIEV22', 'user'),
 (18, 'Ислам', '$2y$10$9Exsk9Hb5CLx81DnNA/9Luwildjzja49ipuYrotnZT0u.s9mNZ5Ue', 'islamgagiev69@gmail.com', 'Ислам', 'GAGIEV', 'user'),
-(19, 'Ислам1576340106', NULL, 'islamgagiev623123123@gmail.com', 'Ислам', '79969509993', 'user');
+(19, 'Ислам1576340106', NULL, 'islamgagiev623123123@gmail.com', 'Ислам', '79969509993', 'user'),
+(20, 'GAGIEVZ', '$2y$10$k1t.36cElyhcoHfpKL32j.f56quhjMx.KKtTK/dFYK7k.hNM1xUgy', 'GAGIEVZ@gmail.com', 'GAGIEVZ', 'GAGIEVZ', 'user');
 
 --
 -- Индексы сохранённых таблиц
@@ -942,6 +956,12 @@ ALTER TABLE `modification`
 -- Индексы таблицы `order`
 --
 ALTER TABLE `order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `order_mod`
+--
+ALTER TABLE `order_mod`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1046,6 +1066,12 @@ ALTER TABLE `order`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
+-- AUTO_INCREMENT для таблицы `order_mod`
+--
+ALTER TABLE `order_mod`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT для таблицы `order_product`
 --
 ALTER TABLE `order_product`
@@ -1061,13 +1087,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT для таблицы `product_detail`
 --
 ALTER TABLE `product_detail`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=310;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=349;
 
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

@@ -97,7 +97,7 @@ class ProductController extends AppController {
             $id = $this->getRequestID(false);
             $product = new Product();
             $data = $_POST;
-           debug($data);
+
 
             $product->load($data);
             $product->attributes['status'] = $product->attributes['status'] ? 'on' : 'off';

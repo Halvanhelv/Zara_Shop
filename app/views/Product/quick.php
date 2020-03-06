@@ -29,8 +29,10 @@
         <div class="qwick-view-content">
             <h3><?=$alias->title?></h3>
             <div class="price">
-                <span class="new"><?=$curr['symbol_left'];?><?=number_format($alias->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
-                <span class="old"><?=$curr['symbol_left'];?><?=number_format($alias->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                <span class="new" id="base-price" data-base-price="<?= $alias->price * $curr['value']?>"><?=$curr['symbol_left'];?><?=number_format($alias->price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                <?php if ($alias->old_price!= 0):?>
+                <span class="old" id="old-price" data-old-price=""><?=$curr['symbol_left'];?><?=number_format($alias->old_price * $curr['value'], 0, ',', ' ');?><?=$curr['symbol_right'];?></span>
+                <?php endif; ?>
             </div>
             <div class="rating-number">
                 <div class="quick-view-rating">
@@ -43,21 +45,21 @@
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
             <div class="quick-view-select">
-                <div class="select-option-part">
-                    <label>Size*</label>
-                    <select class="select">
-                        <option value="">- Please Select -</option>
-                        <option value="">900</option>
-                        <option value="">700</option>
-                    </select>
-                </div>
+<!--                <div class="select-option-part">-->
+<!--                    <label>Size*</label>-->
+<!--                    <select class="select">-->
+<!--                        <option value="">- Please Select -</option>-->
+<!--                        <option value="">900</option>-->
+<!--                        <option value="">700</option>-->
+<!--                    </select>-->
+<!--                </div>-->
                 <div class="select-option-part">
                     <label>Color*</label>
                     <select class="select">
-                        <option value="">- Please Select -</option>
-                        <option value="">orange</option>
-                        <option value="">pink</option>
-                        <option value="">yellow</option>
+                        <option value="">Выбрать цвет</option>
+                       <?php foreach ($mods as $mod):  ?>
+                           <option data-title="<?=$mod->title?>"  data-price="<?=$mod->price * $curr['value']?>" value="<?=$mod->id?>"><?=$mod->title?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -97,4 +99,21 @@
         $button.parent().find("input").val(newVal);
     });
 
+</script>
+
+<script>
+    $('.select-option-part select').on('change', function () {
+        var modId = $(this).val(),
+            color = $(this).find('option').filter(':selected').data('title'),
+            price = $(this).find('option').filter(':selected').data('price'),
+            basePrice = $('#base-price').data('base-price'),
+        oldPrice = $('#old-price').data('old-price');
+        console.log(modId);
+        if (price) {
+            $('#base-price').text(symboleLeft + price + symboleRight);
+        } else {
+            $('#base-price').text(symboleLeft + basePrice + symboleRight);
+        }
+        
+    });
 </script>
