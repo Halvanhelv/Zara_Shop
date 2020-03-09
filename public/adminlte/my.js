@@ -273,11 +273,11 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".add_mod").on('click',function () {
 
-        $('.attr_block').append("  <div class=\"row\">\n" +
+        $('.mod_block').append("  <div class=\"row\">\n" +
             "                            <div class=\"form-group col-md-4  \">\n" +
             "\n" +
             "                                <label for=\"modification\">Атрибут</label>\n" +
-            "                                <select name=\"modification[]\" class=\"form-control select3\"></select>\n" +
+            "                                <select name=\"modification[]\" class=\"form-control select4\"></select>\n" +
             "                            </div>\n" +
             "                            <div class=\"form-group col-md-4 \">\n" +
             "                                <label>Значение</label>\n" +
@@ -295,7 +295,7 @@ $(document).ready(function () {
             "                            </div>\n" +
 
             "                            </div>");
-        $('.select3').select2({placeholder: "Введите нужный атрибут",
+        $('.select4').select2({placeholder: "Введите нужный атрибут",
             //minimumInputLength: 2,
             cache: true,
             ajax: {

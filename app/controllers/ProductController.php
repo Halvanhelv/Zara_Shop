@@ -54,7 +54,6 @@ class ProductController extends AppController
             if ($alias = \R::findOne('product', 'alias = ?', [$alias])) {
                 $gallery = \R::findAll('gallery', 'product_id = ? LIMIT 2', [$alias->id]);
                 $mods = \R::findAll('modification', 'product_id = ?', [$alias->id]);
-                debug($mods);
                 $product = new Product();
                $list = $product->linkedList($mods);
                 if ($this->isAjax()) {

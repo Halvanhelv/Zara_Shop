@@ -92,7 +92,7 @@ class Product extends AppModel {
     {
         $detail = \R::getAll("SELECT  product_id, order_mod_id,price,modification.title AS mod_title FROM modification JOIN order_mod ON order_mod.id = modification.id WHERE modification.product_id = ?", [$id]);
         $tmp = [];
-        if(!empty($data['modification'])) {
+        if(!empty($data['modification']) && empty($detail)) {
             foreach ($data['modification'] as $key => $value) {
                 foreach ($data['mod_attrs'] as $k => $v) {
 
@@ -129,7 +129,7 @@ class Product extends AppModel {
             $sql_part = rtrim($sql_part, ',');
             // если добавляется характеристика товара
             if (empty($detail) && !empty($data['modification'])) {
-                \R::exec("INSERT INTO product_detail (product_id, attribute_id,attr_value) VALUES $sql_part");
+                \R::exec("INSERT INTO modification (product_id,order_mod_id, title,price) VALUES $sql_part");
                 return;
             }
         }
@@ -138,7 +138,7 @@ class Product extends AppModel {
         if(empty($data['modification']) && !empty($detail)) {
 
 
-            \R::exec("DELETE FROM product_detail WHERE product_id = ?", [$id]);
+            \R::exec("DELETE FROM modification WHERE product_id = ?", [$id]);
 
             return;
         }
@@ -152,9 +152,9 @@ for ($i = 0;$i < count($tmp);$i++) {
 
 }
             if (!empty($result) || count($tmp) != count($detail)) {
-                \R::exec("DELETE FROM product_detail WHERE product_id = ?", [$id]);
+                \R::exec("DELETE FROM modification WHERE product_id = ?", [$id]);
 
-                \R::exec("INSERT INTO product_detail (product_id, attribute_id,attr_value) VALUES $sql_part");
+                \R::exec("INSERT INTO modification (product_id,order_mod_id, title,price) VALUES $sql_part");
                 return;
             }
         }

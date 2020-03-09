@@ -152,7 +152,7 @@
                             <?php endif;?>
                             </div>
 
-                        <div class="container-fluid" style="padding-bottom: 20px">
+                        <div class="container-fluid " style="padding-bottom: 20px">
                             <div class="col-md-2  "><button type="button" class=" add_mod btn btn-block btn-success">Добавить модификацию</button></div>
 
                         </div>
