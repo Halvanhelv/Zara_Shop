@@ -54,13 +54,19 @@
 <!--                    </select>-->
 <!--                </div>-->
                 <div class="select-option-part">
-                    <label>Color*</label>
+                    <?php foreach ($list as $item): ?>
+                    <label><?=$item['title'] ?></label>
                     <select class="select">
-                        <option value="">Выбрать цвет</option>
+                        <option value="">Выбрать <?=$item['title'] ?></option>
+
                        <?php foreach ($mods as $mod):  ?>
+                        <?php if ($item['id'] == $mod->order_mod_id): ?>
                            <option data-title="<?=$mod->title?>"  data-price="<?=$mod->price * $curr['value']?>" value="<?=$mod->id?>"><?=$mod->title?></option>
+                           <?php endif; ?>
                         <?php endforeach; ?>
+
                     </select>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="quickview-plus-minus">

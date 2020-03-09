@@ -33,5 +33,18 @@ class Product extends AppModel {
         }
         return false;
     }
+    public function linkedList($mods)
+    {
+        foreach ($mods as $mod) {
+            $order_mods = \R::getAll('SELECT * from order_mod WHERE id = ?', [$mod['order_mod_id']]);
+            foreach ($order_mods as $order_mod) {
+                if ($order_mod['id'] == $mod['order_mod_id']) {
+                    $list[$order_mod['title']]['title'] = $order_mod['title'];
+                    $list[$order_mod['title']]['id'] = $mod['order_mod_id'];
+                }
+            }
+            }
+            return $list;
+        }
 
 }

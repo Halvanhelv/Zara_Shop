@@ -40,9 +40,11 @@ class ProductController extends AppController
 
         // модификации
         $mods = \R::findAll('modification', 'product_id = ?', [$product->id]);
-
+      $list =  $p_model->linkedList($mods);
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->set(compact('product', 'related', 'gallery', 'recentlyViewed', 'breadcrumbs', 'mods', 'detail'));
+
+
+        $this->set(compact('product', 'related', 'gallery', 'recentlyViewed', 'breadcrumbs', 'mods', 'detail','list'));
     }
 
    public function quickAction()
@@ -52,8 +54,11 @@ class ProductController extends AppController
             if ($alias = \R::findOne('product', 'alias = ?', [$alias])) {
                 $gallery = \R::findAll('gallery', 'product_id = ? LIMIT 2', [$alias->id]);
                 $mods = \R::findAll('modification', 'product_id = ?', [$alias->id]);
+                debug($mods);
+                $product = new Product();
+               $list = $product->linkedList($mods);
                 if ($this->isAjax()) {
-                    $this->loadView('quick', compact('alias','gallery','mods'));
+                    $this->loadView('quick', compact('alias','gallery','mods','list'));
                 }
             }
         }

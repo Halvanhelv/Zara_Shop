@@ -91,7 +91,6 @@ class Product extends AppModel {
     public function modification($id,$data)
     {
         $detail = \R::getAll("SELECT  product_id, order_mod_id,price,modification.title AS mod_title FROM modification JOIN order_mod ON order_mod.id = modification.id WHERE modification.product_id = ?", [$id]);
-
         $tmp = [];
         if(!empty($data['modification'])) {
             foreach ($data['modification'] as $key => $value) {
