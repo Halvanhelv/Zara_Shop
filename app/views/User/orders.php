@@ -1,12 +1,12 @@
-<!--start-breadcrumbs-->
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="breadcrumbs-main">
-            <ol class="breadcrumb">
+<div class="breadcrumb-area mt-37 hm-4-padding">
+    <div class="container-fluid">
+        <div class="breadcrumb-content text-center border-top-2">
+            <h2>Личный кабинет</h2>
+            <ul >
                 <li><a href="<?=PATH;?>">Главная</a></li>
                 <li><a href="<?=PATH;?>/user/cabinet">Личный кабинет</a></li>
                 <li>История заказов</li>
-            </ol>
+            </ul>
         </div>
     </div>
 </div>

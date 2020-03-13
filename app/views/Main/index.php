@@ -26,63 +26,7 @@
     </div>
 </div>
 <?php endif; ?>
-<div class="banner-area hm1-banner pt-130 pb-107">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-4">
-                <div class="banner-wrapper banner-border ml-10 mb-30">
-                    <div class="banner-img">
-                        <a href="#"><img src="assets/img/banner/1.jpg" alt="image"></a>
-                    </div>
-                    <div class="banner-content-style1 banner-position-center-right">
-                        <h2>30% <span><img src="assets/img/icon-img/discount.png" alt="image"></span> <br>Products</h2>
-                    </div>
-                </div>
-                <div class="banner-wrapper banner-border ml-10 mb-30">
-                    <div class="banner-img">
-                        <a href="#"><img src="assets/img/banner/2.jpg" alt="image"></a>
-                    </div>
-                    <div class="banner-content-style2 banner-position-center-left">
-                        <h3>Don’t Miss</h3>
-                        <h2>Rattan <span>Bag.</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="banner-wrapper mrg-mb-md">
-                    <div class="banner-img">
-                        <a href="#"><img src="assets/img/banner/3.jpg" alt="image"></a>
-                    </div>
-                    <div class="banner-content-style3 banner-position-top">
-                        <h3>Black Friday Offer</h3>
-                    </div>
-                    <div class="banner-content-style4 banner-position-bottom">
-                        <h3>20% Off</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-4">
-                <div class="banner-wrapper banner-border-2 mr-10 mb-30">
-                    <div class="banner-img">
-                        <a href="#"><img src="assets/img/banner/4.jpg" alt="image"></a>
-                    </div>
-                    <div class="banner-content-style2 banner-position-center-left">
-                        <h3>Don’t Miss</h3>
-                        <h2>Rattan <span>Lamp.</span></h2>
-                    </div>
-                </div>
-                <div class="banner-wrapper banner-border-2 mr-10 mb-30">
-                    <div class="banner-img">
-                        <a href="#"><img src="assets/img/banner/5.jpg" alt="image"></a>
-                    </div>
-                    <div class="banner-content-style1 banner-position-center-right">
-                        <h2>30% <span> <img src="assets/img/icon-img/discount.png" alt="image"></span> <br>Products</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="product-area pb-80">
     <div class="container">
         <div class="section-title text-center mb-20">
@@ -409,42 +353,7 @@
         </div>
     </div>
 </div>
-<div class="dealy-of-product-area gray-bg dealy-mrg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-12">
-                <div class="dealy-product-img wow fadeInLeft">
-                    <img src="assets/img/banner/1.png" alt="image">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 dealy-product-content-center">
-                <div class="dealy-product-content">
-                    <h3><a href="#">Rattan Rocking Cradle</a></h3>
-                    <div class="dealy-rating">
-                        <i class="ion-ios-star"></i>
-                        <i class="ion-ios-star"></i>
-                        <i class="ion-ios-star"></i>
-                        <i class="ion-ios-star"></i>
-                        <i class="ion-ios-star"></i>
-                    </div>
-                    <div class="dealy-price">
-                        <span class="old">$20.00</span>
-                        <span>$15.00</span>
-                    </div>
-                    <div class="timer">
-                        <div data-countdown="2018/06/01"></div>
-                    </div>
-                    <a href="#" class="btn-style cr-btn"><span>shop now</span></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-12">
-                <div class="dealy-product-img wow fadeInRight f-right">
-                    <img src="assets/img/banner/2.png" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="blog-area pt-125 pb-85 blog-padding hm-blog">
     <div class="container-fluid">
         <div class="section-title text-center mb-60">

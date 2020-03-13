@@ -53,17 +53,17 @@
                             <div class="login-form-container">
                                 <div class="login-form">
                                     <form action="user/login" method="post" data-toggle="validator" id="sign" role="form">
-                                        <input type="text" id="sign_login" name="sign_login"  placeholder="Username" required>
+                                        <input type="text" id="sign_login" name="sign_login"  placeholder="Имя" required>
                                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                        <input type="password" name="sign_password" id="sign_password" placeholder="Password" required>
+                                        <input type="password" name="sign_password" id="sign_password" placeholder="Пароль" required>
                                         <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                         <div class="button-box">
                                             <div class="login-toggle-btn">
                                                 <input type="checkbox">
-                                                <label>Remember me</label>
-                                                <a href="#">Forgot Password?</a>
+                                                <label>Запомнить меня</label>
+                                                <a href="#">Забыли пароль?</a>
                                             </div>
-                                            <button type="submit" class="btn-style cr-btn"><span>Login</span></button>
+                                            <button type="submit" class="btn-style cr-btn"><span>Войти</span></button>
                                         </div>
                                     </form>
                                 </div>
