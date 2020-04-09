@@ -44,6 +44,7 @@ class Product extends AppModel {
                 }
             }
             }
+        if (isset($list))
             return $list;
         }
 

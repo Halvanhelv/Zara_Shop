@@ -54,6 +54,7 @@
 <!--                    </select>-->
 <!--                </div>-->
                 <div class="select-option-part">
+                    <?php if (isset($list)): ?>
                     <?php foreach ($list as $item): ?>
                     <label><?=$item['title'] ?></label>
                     <select class="select">
@@ -68,10 +69,17 @@
                     </select>
                     <?php endforeach; ?>
                 </div>
+                <?php else: ?>
+                    <label><?=$alias->title ?></label>
+                <select class="select">
+                    <option value="">Выбрать <?=$item['title'] ?></option>
+
+                </select>
+                <?php endif; ?>
             </div>
             <div class="quickview-plus-minus">
                 <div class="cart-plus-minus">
-                    <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
+                    <input type="text" value="1" name="qtybutton" class="cart-plus-minus-box">
                 </div>
                 <div class="quickview-btn-cart">
                     <a class="btn-style cr-btn add-to-cart-link" data-id="<?=$alias->id;?>" href="#"><span>add to cart</span></a>

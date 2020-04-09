@@ -139,11 +139,11 @@ class ProductController extends AppController {
         $related_product = \R::getAll("SELECT related_product.related_id, product.title FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$id]);
         $gallery = \R::getCol('SELECT img FROM gallery WHERE product_id = ?', [$id]);
         $detail = \R::getAll("SELECT * FROM product_detail JOIN detail ON product_detail.attribute_id = detail.id WHERE product_detail.product_id = ?", [$id]);
-             $modification = new Product();
+             $modification = \R::getAll("SELECT order_mod.id,order_mod.title,modification.price,modification.title AS mod_title   FROM order_mod JOIN modification ON order_mod.id = modification.order_mod_id WHERE modification.product_id = ?", [$id]);
              //ДОБАВИТЬ отображение модификаций товара
         $this->setMeta("Редактирование товара {$product->title}");
 
-        $this->set(compact('product', 'filter', 'related_product', 'gallery','detail'));
+        $this->set(compact('product', 'filter', 'related_product', 'gallery','detail','modification'));
     }
 
     public function addAction(){

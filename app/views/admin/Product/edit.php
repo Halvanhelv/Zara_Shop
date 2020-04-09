@@ -156,8 +156,37 @@
                             <div class="col-md-2  "><button type="button" class=" add_mod btn btn-block btn-success">Добавить модификацию</button></div>
 
                         </div>
-                        <div class="container-fluid mod_block " >
 
+                        <div class="container-fluid mod_block " >
+                            <?php if (!empty($modification)): ?>
+
+                                <?php foreach ($modification as $item): ?>
+                                    <div class="row">
+                                        <div class="form-group col-md-4  ">
+                                            <label for="modification">Атрибут</label>
+                                            <select name="modification[]"   class="form-control select4">
+                                                <option value="<?php echo $item['id'] ?>" selected="selected"><?php echo $item['title'] ?></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Значение</label>
+                                            <input type="text" name="mod_attrs[]" value="<?php echo $item['mod_title']?>" class="form-control" placeholder="Введите значение ..." autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+
+                                        </div>
+
+                                        <div class="form-group col-md-3 ">
+                                        <label>Цена</label>
+                                        <input type="text" name="mod_price[]" value="<?php echo $item['price']?>" class="form-control" placeholder="Введите значение ..." autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto; " required>
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                                  </div>
+                                        <div class="form-group col-md-1  ">
+                                            <label for="detail"></label>
+                                            <button type="button" class="btn btn-block btn-danger delete-attr delete">удалить</button>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+
+                            <?php endif;?>
                         </div>
 
 

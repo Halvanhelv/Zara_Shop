@@ -127,6 +127,27 @@ $(".select3").select2({
         }
     }
 });
+$(".select4").select2({
+    placeholder: "Введите нужный атрибут",
+    //minimumInputLength: 2,
+    cache: true,
+    ajax: {
+        url: adminpath + "/modification/modification-product",
+        delay: 250,
+        dataType: 'json',
+        data: function (params) {
+            return {
+                q: params.term,
+                page: params.page
+            };
+        },
+        processResults: function (data, params) {
+            return {
+                results: data.items
+            };
+        }
+    }
+});
 
 
 if($('div').is('#single')){
